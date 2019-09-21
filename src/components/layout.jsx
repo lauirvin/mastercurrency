@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "gatsby";
 import { push as Menu } from "react-burger-menu";
 
@@ -8,8 +8,11 @@ import "firebase/auth";
 import firebaseConfig from "../utilities/firebaseConfig";
 import "../styles/styles.scss";
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+let firebaseApp;
 let firebaseAppAuth;
+if (!firebase.apps.length) {
+  firebaseApp = firebase.initializeApp(firebaseConfig);
+}
 if (typeof window !== "undefined") {
   firebaseAppAuth = firebaseApp.auth();
 }
@@ -18,6 +21,15 @@ const providers = {
 };
 
 const Layout = ({ children, user, signOut, signInWithGoogle }) => {
+  useEffect(() => {
+    const tag = document.getElementsByTagName("a");
+    Array.from(tag).forEach((element, i) => {
+      if (element.innerHTML === children[0].props.title) {
+        tag[i].classList.add("selected");
+      }
+    });
+  });
+
   return (
     <div id="outer-container">
       <Menu right pageWrapId={"page-wrap"} outerContainerId={"outer-container"}>

@@ -45,6 +45,10 @@ header {
         cursor: pointer;
       }
 
+      .selected {
+        color: $coral;
+      }
+
       .authentication {
         display: flex;
         white-space: nowrap;
