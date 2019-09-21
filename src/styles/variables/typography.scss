@@ -1,6 +1,7 @@
 $primary-medium: "Cereal-Medium";
 $primary-book: "Cereal-Book";
 $primary-regular: "Cereal-Light";
+$primary-bold: "Cereal-Bold";
 
 @font-face {
   font-family: $primary-medium;
@@ -20,23 +21,48 @@ $primary-regular: "Cereal-Light";
     url("./variables/fonts/Cereal/AirbnbCereal-Light.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: $primary-bold;
+  src: url("./variables/fonts/Cereal/AirbnbCereal-Bold.ttf") format("woff"),
+    url("./variables/fonts/Cereal/AirbnbCereal-Bold.ttf") format("truetype");
+}
+
 html {
   font-family: $primary-regular;
+  color: $fontColor;
 }
 
 h1 {
-  font-family: $primary-book;
-  font-size: 7rem;
+  font-family: $primary-bold;
+  color: $coral;
+  font-size: 4.5rem;
   margin: 0;
+
+  span {
+    font-family: $primary-regular;
+    font-weight: lighter;
+    color: $yellow;
+    font-size: inherit;
+  }
 }
 
 h2 {
-  font-family: $primary-regular;
-  font-weight: lighter;
-  font-size: 2.5rem;
+  font-family: $primary-book;
+  font-size: 2.8rem;
   line-height: 2;
-  border-bottom: 1px solid $verylightgray;
   margin-top: 0;
+}
+
+h3 {
+  font-family: $primary-book;
+  font-size: 2.4rem;
+}
+
+a {
+  font-family: $primary-medium;
+  &:hover {
+    color: $coral;
+  }
 }
 
 p,
@@ -44,7 +70,7 @@ a,
 span {
   font-size: 1.7rem;
   margin: 0;
-  color: $black;
+  color: $fontColor;
   text-decoration: none;
 }
 

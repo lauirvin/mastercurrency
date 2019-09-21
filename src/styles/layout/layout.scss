@@ -6,6 +6,7 @@ html {
   -webkit-text-size-adjust: 100%;
   user-select: none;
   outline: none;
+  background: white;
 }
 
 body {
@@ -20,49 +21,48 @@ button {
 
 header {
   height: 10vh;
-  background: $navColor;
   width: 100%;
+  padding-top: 2rem;
 
   .header-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    align-items: flex-end;
     align-items: center;
     height: 100%;
     max-width: 124rem;
     padding: 0% 3% 0 3%;
     margin: 0 auto;
-    background-image: url("../media/avatar.png");
-    background-repeat: no-repeat;
-    background-size: 70px;
-    background-position: 4% center;
 
     nav {
+      flex: 1;
       display: flex;
-      width: 70%;
       justify-content: flex-end;
+      align-items: center;
 
       a {
         margin-right: 5rem;
+        cursor: pointer;
       }
-    }
 
-    .authentication {
-      display: flex;
-      white-space: nowrap;
-      button {
-        background: none;
-        border: 1px solid $darkblue;
-        border-radius: 10px;
-        height: 4rem;
-        width: 12rem;
-        font-size: 1.7rem;
+      .authentication {
+        display: flex;
+        white-space: nowrap;
+        button {
+          background: none;
+          border: none;
+          border-radius: 10px;
+          height: 4rem;
+          width: 12rem;
+          font-size: 1.7rem;
+        }
       }
     }
   }
 }
 
 main {
-  margin: 2% auto 3% auto;
+  margin: 1% auto 3% auto;
   padding: 0% 3% 0 3%;
   max-width: 124rem;
 }

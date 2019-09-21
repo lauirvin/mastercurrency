@@ -1,8 +1,8 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import SEO from "../components/SEO";
 
 const NotFoundPage = () => (
   <Layout>
@@ -11,6 +11,6 @@ const NotFoundPage = () => (
     <p>You just hit a route that doesn't exist... the sadness.</p>
     <Link to="/">Return home</Link>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;
