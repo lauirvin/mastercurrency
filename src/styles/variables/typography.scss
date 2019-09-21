@@ -1,0 +1,54 @@
+$primary-medium: "Cereal-Medium";
+$primary-book: "Cereal-Book";
+$primary-regular: "Cereal-Light";
+
+@font-face {
+  font-family: $primary-medium;
+  src: url("./variables/fonts/Cereal/AirbnbCereal-Medium.ttf") format("woff"),
+    url("./variables/fonts/Cereal/AirbnbCereal-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: $primary-book;
+  src: url("./variables/fonts/Cereal/AirbnbCereal-Book.ttf") format("woff"),
+    url("./variables/fonts/Cereal/AirbnbCereal-Book.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: $primary-regular;
+  src: url("./variables/fonts/Cereal/AirbnbCereal-Light.ttf") format("woff"),
+    url("./variables/fonts/Cereal/AirbnbCereal-Light.ttf") format("truetype");
+}
+
+html {
+  font-family: $primary-regular;
+}
+
+h1 {
+  font-family: $primary-book;
+  font-size: 7rem;
+  margin: 0;
+}
+
+h2 {
+  font-family: $primary-regular;
+  font-weight: lighter;
+  font-size: 2.5rem;
+  line-height: 2;
+  border-bottom: 1px solid $verylightgray;
+  margin-top: 0;
+}
+
+p,
+a,
+span {
+  font-size: 1.7rem;
+  margin: 0;
+  color: $black;
+  text-decoration: none;
+}
+
+p {
+  margin-top: 3rem;
+  line-height: 1.7;
+}
