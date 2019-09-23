@@ -19,6 +19,16 @@ button {
   outline: none;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 header {
   height: 10vh;
   width: 100%;
@@ -69,6 +79,10 @@ main {
   margin: 1% auto 3% auto;
   padding: 0% 3% 0 3%;
   max-width: 124rem;
+
+  .components-container {
+    display: flex;
+  }
 }
 
 @include mobileView() {
@@ -77,8 +91,5 @@ main {
   }
   header {
     display: none;
-  }
-  .bm-burger-button {
-    display: block !important;
   }
 }

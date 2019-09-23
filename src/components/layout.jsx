@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Link } from "gatsby";
-import { push as Menu } from "react-burger-menu";
 
 import withFirebaseAuth from "react-with-firebase-auth";
 import firebase from "firebase/app";
@@ -32,17 +31,6 @@ const Layout = ({ children, user, signOut, signInWithGoogle }) => {
 
   return (
     <div id="outer-container">
-      <Menu right pageWrapId={"page-wrap"} outerContainerId={"outer-container"}>
-        <Link to="/">Home</Link>
-        <Link to="/page2">Page 2</Link>
-        <div className="authentication">
-          {user ? (
-            <button onClick={signOut}>Sign out</button>
-          ) : (
-            <button onClick={signInWithGoogle}>Sign in</button>
-          )}
-        </div>
-      </Menu>
       <header>
         <div className="header-container">
           <h1>
@@ -63,10 +51,7 @@ const Layout = ({ children, user, signOut, signInWithGoogle }) => {
           </nav>
         </div>
       </header>
-      <main id="page-wrap">
-        {children}
-        {/* {user ? <h2>Welcome {user.displayName}</h2> : <h2> Please sign in </h2>} */}
-      </main>
+      <main id="page-wrap">{children}</main>
     </div>
   );
 };

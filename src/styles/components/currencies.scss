@@ -1,0 +1,67 @@
+.currencies-container {
+  display: flex;
+  flex-direction: column;
+
+  .currency {
+    background: linear-gradient(90deg, $coral 0%, $peach 100%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    width: 60rem;
+    height: 9rem;
+    margin-bottom: 1.5rem;
+
+    &-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 2rem;
+      margin-left: 2rem;
+      height: 100%;
+
+      h3,
+      p,
+      input {
+        margin: 0;
+        color: $white;
+        &::placeholder {
+          color: $white;
+        }
+      }
+      &-title {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+      input {
+        background: none;
+        border: none;
+        outline: none;
+        text-align: right;
+        border-bottom: 1px solid $white;
+        margin-right: 2rem;
+      }
+      hr {
+        border: none;
+        border-left: 1px solid $white;
+        height: 55%;
+        width: 1px;
+      }
+
+      .flag {
+        width: 5rem;
+        height: 5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        border-radius: 50%;
+        border: 1px solid $white;
+        object-fit: cover;
+      }
+
+      .draggable-icon {
+        width: 3rem;
+        margin-left: 2rem;
+        filter: brightness(10000%) contrast(10000%);
+      }
+    }
+  }
+}
