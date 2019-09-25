@@ -7,7 +7,7 @@ const Currency = props => {
   const [value, setValue] = useState(1);
 
   return (
-    <div className={`currency`}>
+    <div className="currency">
       <div className="currency-content">
         <img alt="flag" className="flag" src={flag} />
         <div className="currency-content-title">
@@ -21,6 +21,10 @@ const Currency = props => {
           placeholder="1.0000"
           onChange={e => setValue(e.target.value)}
         />
+        <div className="currency-content-conversion">
+          <h3>9.8329</h3>
+          <p>1 HKD = 0.1017 GBP</p>
+        </div>
         <hr />
         <img alt="list" className="draggable-icon" src={draggable} />
       </div>
@@ -28,19 +32,3 @@ const Currency = props => {
   );
 };
 export default Currency;
-
-// <div className="currency">
-// <div className="currency-content">
-//   <img alt="flag" className="flag" src={flag} />
-//   <div className="currency-content-title">
-//     <h3>GBP</h3>
-//     <p>British Pound</p>
-//   </div>
-//   <div className="currency-content-conversion">
-//     <h3>9.8329</h3>
-//     <p>1 HKD = 0.1017 GBP</p>
-//   </div>
-//   <hr />
-//   <img alt="list" className="draggable-icon" src={draggable} />
-// </div>
-// </div>

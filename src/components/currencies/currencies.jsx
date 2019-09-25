@@ -11,26 +11,31 @@ const Currencies = () => {
     let list = [];
     currencyData.forEach(country => {
       const currency = {
-        content: <Currency code={country.code} name={country.name} />,
+        content: (
+          <Currency code={country.code} name={country.name} modClass="" />
+        ),
         classes: ""
       };
       list.push(currency);
     });
+    list[0]["classes"] = ["mod-selected"];
     await updateCurrencyList(list);
   };
 
-  var onSort = (sortedList, dropEvent) => {
+  const onSort = sortedList => {
     updateCurrencyList(sortedList);
 
     currencyList.forEach(e => {
       if (e.rank === 0) {
-        let selectedCurrency = Object.assign(e);
         for (var i in currencyList) {
-          if (currencyList[i] === selectedCurrency) {
-            currencyList.splice(i, 1);
-            selectedCurrency["classes"] = ["mod-selected"];
-            currencyList.unshift(selectedCurrency);
+          let currency = currencyList[i];
+          if (currency === e) {
+            currency["classes"] = ["mod-selected"];
             updateCurrencyList(currencyList);
+          } else {
+            if (currency["classes"][0] === "mod-selected") {
+              currency["classes"] = "";
+            }
           }
         }
       } else {
