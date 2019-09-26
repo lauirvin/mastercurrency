@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import axios from "axios";
 import Select from "react-select";
 
 import Currency from "./currency";
 import currencyData from "../../data/countries.json";
-
-const grid = 8;
 
 const Currencies = () => {
   const fetchCurrencies = () => {
@@ -34,15 +33,7 @@ const Currencies = () => {
     return list;
   };
 
-  const reorder = (list, startIndex, endIndex) => {
-    const result = Array.from(list);
-    const [removed] = result.splice(startIndex, 1);
-    result.splice(endIndex, 0, removed);
-
-    return result;
-  };
-
-  const [items, updateItems] = useState([]);
+  const [items, updateItems] = useState();
   const [currencies, updateCurrencyList] = useState(fetchCurrencies());
   const [options, updateOptions] = useState(fetchOptions());
 
@@ -56,13 +47,22 @@ const Currencies = () => {
         for (var i in currencies) {
           if (currencies[i].id === currencyToAdd) {
             const newItems = [...items];
+
             newItems.push(currencies[i]);
+
             updateItems(newItems);
           }
         }
-        updateOptions(options);
       }
     }
+  };
+
+  const reorder = (list, startIndex, endIndex) => {
+    const result = Array.from(list);
+    const [removed] = result.splice(startIndex, 1);
+    result.splice(endIndex, 0, removed);
+
+    return result;
   };
 
   const onDragEnd = result => {
@@ -79,6 +79,28 @@ const Currencies = () => {
     updateItems(newOrder);
   };
 
+  useEffect(() => {
+    const fetchUserLocation = async () => {
+      let list = [];
+      await axios
+        .get("https://ipapi.co/json/")
+        .then(response => {
+          let data = response.data;
+          for (var i in currencies) {
+            if (currencies[i].code === data.currency) {
+              list.push(currencies[i]);
+              updateItems(list);
+            }
+          }
+        })
+        .catch(error => {
+          console.log(error);
+        });
+      return list;
+    };
+    fetchUserLocation();
+  }, []);
+
   return (
     <div className="currencies-container">
       <Select value={"Add Currency"} onChange={addCurrency} options={options} />
@@ -86,19 +108,21 @@ const Currencies = () => {
         <Droppable droppableId="droppable">
           {(provided, snapshot) => (
             <div {...provided.droppableProps} ref={provided.innerRef}>
-              {items.map((item, index) => (
-                <Draggable key={item.id} draggableId={item.id} index={index}>
-                  {(provided, snapshot) => (
-                    <div ref={provided.innerRef} {...provided.draggableProps}>
-                      <Currency
-                        dragHandle={provided.dragHandleProps}
-                        code={item.code}
-                        name={item.name}
-                      />
-                    </div>
-                  )}
-                </Draggable>
-              ))}
+              {/* {console.log(items)} */}
+              {items !== undefined &&
+                items.map((item, index) => (
+                  <Draggable key={item.id} draggableId={item.id} index={index}>
+                    {(provided, snapshot) => (
+                      <div ref={provided.innerRef} {...provided.draggableProps}>
+                        <Currency
+                          dragHandle={provided.dragHandleProps}
+                          code={item.code}
+                          name={item.name}
+                        />
+                      </div>
+                    )}
+                  </Draggable>
+                ))}
               {provided.placeholder}
             </div>
           )}
