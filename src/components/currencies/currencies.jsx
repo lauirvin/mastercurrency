@@ -57,7 +57,6 @@ const Currencies = () => {
           if (currencies[i].id === currencyToAdd) {
             const newItems = [...items];
             newItems.push(currencies[i]);
-            
             updateItems(newItems);
           }
         }
@@ -83,7 +82,6 @@ const Currencies = () => {
   return (
     <div className="currencies-container">
       <Select value={"Add Currency"} onChange={addCurrency} options={options} />
-
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="droppable">
           {(provided, snapshot) => (
@@ -91,12 +89,12 @@ const Currencies = () => {
               {items.map((item, index) => (
                 <Draggable key={item.id} draggableId={item.id} index={index}>
                   {(provided, snapshot) => (
-                    <div
-                      ref={provided.innerRef}
-                      {...provided.draggableProps}
-                      {...provided.dragHandleProps}
-                    >
-                      <Currency code={item.code} name={item.name} />
+                    <div ref={provided.innerRef} {...provided.draggableProps}>
+                      <Currency
+                        dragHandle={provided.dragHandleProps}
+                        code={item.code}
+                        name={item.name}
+                      />
                     </div>
                   )}
                 </Draggable>

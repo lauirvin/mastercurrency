@@ -44,7 +44,6 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      margin-right: 2rem;
       margin-left: 2rem;
       height: 100%;
 
@@ -95,9 +94,16 @@
         object-fit: cover;
       }
 
-      .draggable-icon {
-        width: 3rem;
-        margin-left: 2rem;
+      .draggable-handle {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        &-icon {
+          width: 3rem;
+          margin-left: 2rem;
+          margin-right: 2rem;
+        }
       }
     }
   }

@@ -26,7 +26,9 @@ const Currency = props => {
           <p>1 HKD = 0.1017 GBP</p>
         </div>
         <hr />
-        <img alt="list" className="draggable-icon" src={draggable} />
+        <div className="draggable-handle" {...props.dragHandle}>
+          <img alt="list" className="draggable-handle-icon" src={draggable} />
+        </div>
       </div>
     </div>
   );
