@@ -19,9 +19,12 @@
     "node-sass": "^4.12.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
+    "react-beautiful-dnd": "^11.0.5",
     "react-dom": "^16.9.0",
     "react-drag-sortable": "^1.0.6",
     "react-helmet": "^5.2.1",
+    "react-helmet-async": "^1.0.3",
+    "react-select": "^3.0.5",
     "react-with-firebase-auth": "^1.0.4"
   },
   "devDependencies": {

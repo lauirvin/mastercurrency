@@ -13,29 +13,26 @@ const Currencies = () => {
       const currency = {
         id: `${id}`,
         code: `${country.code}`,
-        name: `${country.name}`
+        name: `${country.name}`,
+        modClass: ``
       };
       list.push(currency);
     });
     return list;
   };
 
-  const fetchOptions = () => {
-    let list = [];
-    currencyData.forEach((country, id) => {
-      const options = {
-        id: `${id}`,
-        value: `${country.code}`,
-        label: `${country.code} - ${country.name}`
-      };
-      list.push(options);
-    });
-    return list;
-  };
+  const mainCurrency = () => {
+    if (items !== undefined) {
+      items[0].modClass = "mod-selected";
 
-  const [items, updateItems] = useState();
-  const [currencies, updateCurrencyList] = useState(fetchCurrencies());
-  const [options, updateOptions] = useState(fetchOptions());
+      const unselectedItems = items.slice(1);
+      for (var i in unselectedItems) {
+        if (unselectedItems[i].modClass.length > 0) {
+          unselectedItems[i].modClass = "";
+        }
+      }
+    }
+  };
 
   const addCurrency = currency => {
     const currencyToAdd = currency.id;
@@ -44,11 +41,11 @@ const Currencies = () => {
       if (currencyToAdd === options[i].id) {
         options.splice(i, 1);
 
-        for (var i in currencies) {
-          if (currencies[i].id === currencyToAdd) {
+        for (var j in currencies) {
+          if (currencies[j].id === currencyToAdd) {
             const newItems = [...items];
 
-            newItems.push(currencies[i]);
+            newItems.push(currencies[j]);
 
             updateItems(newItems);
           }
@@ -79,6 +76,10 @@ const Currencies = () => {
     updateItems(newOrder);
   };
 
+  const [items, updateItems] = useState();
+  const [currencies, updateCurrencyList] = useState(fetchCurrencies());
+  const [options, updateOptions] = useState();
+
   useEffect(() => {
     const fetchUserLocation = async () => {
       let list = [];
@@ -96,10 +97,24 @@ const Currencies = () => {
         .catch(error => {
           console.log(error);
         });
-      return list;
     };
+
+    const fetchOptions = () => {
+      let list = [];
+      currencyData.forEach((country, id) => {
+        const options = {
+          id: `${id}`,
+          value: `${country.code}`,
+          label: `${country.code} - ${country.name}`
+        };
+        list.push(options);
+      });
+      updateOptions(list);
+    };
+
+    fetchOptions();
     fetchUserLocation();
-  }, []);
+  }, [mainCurrency()]);
 
   return (
     <div className="currencies-container">
@@ -108,7 +123,6 @@ const Currencies = () => {
         <Droppable droppableId="droppable">
           {(provided, snapshot) => (
             <div {...provided.droppableProps} ref={provided.innerRef}>
-              {/* {console.log(items)} */}
               {items !== undefined &&
                 items.map((item, index) => (
                   <Draggable key={item.id} draggableId={item.id} index={index}>
@@ -118,6 +132,7 @@ const Currencies = () => {
                           dragHandle={provided.dragHandleProps}
                           code={item.code}
                           name={item.name}
+                          modClass={item.modClass}
                         />
                       </div>
                     )}

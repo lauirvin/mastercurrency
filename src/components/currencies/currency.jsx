@@ -7,7 +7,7 @@ const Currency = props => {
   const [value, setValue] = useState(1);
 
   return (
-    <div className="currency">
+    <div className={`currency ${props.modClass}`}>
       <div className="currency-content">
         <img alt="flag" className="flag" src={flag} />
         <div className="currency-content-title">
