@@ -7,29 +7,13 @@ import Currency from "./currency";
 import currencyData from "../../data/countries.json";
 
 const Currencies = () => {
-  const fetchCurrencies = () => {
-    let list = [];
-    currencyData.forEach((country, id) => {
-      const currency = {
-        id: `${id}`,
-        code: `${country.code}`,
-        name: `${country.name}`,
-        modClass: ``
-      };
-      list.push(currency);
-    });
-    return list;
-  };
+  const mainCurrency = items => {
+    items[0].modClass = "mod-selected";
 
-  const mainCurrency = () => {
-    if (items !== undefined) {
-      items[0].modClass = "mod-selected";
-
-      const unselectedItems = items.slice(1);
-      for (var i in unselectedItems) {
-        if (unselectedItems[i].modClass.length > 0) {
-          unselectedItems[i].modClass = "";
-        }
+    const unselectedItems = items.slice(1);
+    for (var i in unselectedItems) {
+      if (unselectedItems[i].modClass.length > 0) {
+        unselectedItems[i].modClass = "";
       }
     }
   };
@@ -74,51 +58,88 @@ const Currencies = () => {
     );
 
     updateItems(newOrder);
+    mainCurrency(newOrder);
   };
 
-  const [items, updateItems] = useState();
+  const fetchCurrencies = () => {
+    let list = [];
+    currencyData.forEach((country, id) => {
+      const currency = {
+        id: `${id}`,
+        code: `${country.code}`,
+        name: `${country.name}`,
+        modClass: ``
+      };
+      list.push(currency);
+    });
+    return list;
+  };
+
+  const fetchUserLocation = async currencies => {
+    let list = [currencies[44], currencies[137], currencies[41]]; // Default list of items
+
+    const currentLocation = await axios
+      .get("https://ipapi.co/json/")
+      .then(response => {
+        const data = response.data;
+
+        for (var i in currencies) {
+          if (currencies[i].code === data.currency) {
+            list.push(currencies[i]);
+            return list;
+          }
+        }
+      })
+      .catch(error => {
+        return {
+          currency: "HKD"
+        };
+      });
+
+    return currentLocation;
+  };
+
+  const fetchOptions = (currencies, items) => {
+    let list = [];
+    for (var id in currencies) {
+      const country = currencies[id];
+      const options = {
+        id: `${id}`,
+        value: `${country.code}`,
+        label: `${country.code} - ${country.name}`
+      };
+      list.push(options);
+    }
+
+    for (var e in list) {
+      for (var i in items) {
+        if (list[e].value === items[i].code) {
+          list.splice(e, 1);
+        }
+      }
+    }
+
+    return list;
+  };
+
   const [currencies, updateCurrencyList] = useState(fetchCurrencies());
+  const [items, updateItems] = useState();
   const [options, updateOptions] = useState();
 
   useEffect(() => {
-    const fetchUserLocation = async () => {
-      let list = [];
-      await axios
-        .get("https://ipapi.co/json/")
-        .then(response => {
-          let data = response.data;
-          for (var i in currencies) {
-            if (currencies[i].code === data.currency) {
-              list.push(currencies[i]);
-              updateItems(list);
-            }
-          }
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    };
-
-    const fetchOptions = () => {
-      let list = [];
-      currencyData.forEach((country, id) => {
-        const options = {
-          id: `${id}`,
-          value: `${country.code}`,
-          label: `${country.code} - ${country.name}`
-        };
-        list.push(options);
-      });
-      updateOptions(list);
-    };
-
-    fetchOptions();
-    fetchUserLocation();
-  }, [mainCurrency()]);
+    fetchUserLocation(fetchCurrencies()).then(value => {
+      if (value !== undefined) {
+        updateItems(value);
+        mainCurrency(value);
+        updateOptions(fetchOptions(currencies, value));
+      }
+    });
+  }, []);
 
   return (
     <div className="currencies-container">
       <Select value={"Add Currency"} onChange={addCurrency} options={options} />
+
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="droppable">
           {(provided, snapshot) => (
@@ -148,25 +169,3 @@ const Currencies = () => {
 };
 
 export default Currencies;
-
-// const onSort = sortedList => {
-//   updateCurrencyList(sortedList);
-
-//   currencyList.forEach(e => {
-//     if (e.rank === 0) {
-//       for (var i in currencyList) {
-//         let currency = currencyList[i];
-//         if (currency === e) {
-//           currency["classes"] = ["mod-selected"];
-//           updateCurrencyList(currencyList);
-//         } else {
-//           if (currency["classes"][0] === "mod-selected") {
-//             currency["classes"] = "";
-//           }
-//         }
-//       }
-//     } else {
-//       updateCurrencyList(sortedList);
-//     }
-//   });
-// };
