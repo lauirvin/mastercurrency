@@ -163,6 +163,7 @@ const Currencies = () => {
         id: `${id}`,
         code: `${country.code}`,
         name: `${country.name}`,
+        flag: `${country.flag}`,
         modClass: ``
       };
       list.push(currency);
@@ -268,6 +269,7 @@ const Currencies = () => {
                           dragHandle={provided.dragHandleProps}
                           code={item.code}
                           name={item.name}
+                          flag={item.flag}
                           modClass={item.modClass}
                         />
                       </div>

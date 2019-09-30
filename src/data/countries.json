@@ -2,756 +2,907 @@
   {
     "code": "AED",
     "symbol": "د.إ",
-    "name": "UAE Dirham"
+    "name": "UAE Dirham",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_United_Arab_Emirates.svg"
   },
   {
     "code": "AFN",
     "symbol": "Af",
-    "name": "Afghani"
+    "name": "Afghani",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Afghanistan.svg"
   },
   {
     "code": "ALL",
     "symbol": "L",
-    "name": "Lek"
+    "name": "Lek",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg"
   },
   {
     "code": "AMD",
     "symbol": "Դ",
-    "name": "Armenian Dram"
+    "name": "Armenian Dram",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg"
   },
   {
     "code": "AOA",
     "symbol": "Kz",
-    "name": "Kwanza"
+    "name": "Kwanza",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg"
   },
   {
     "code": "ARS",
     "symbol": "$",
-    "name": "Argentine Peso"
+    "name": "Argentine Peso",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg"
   },
   {
     "code": "AUD",
     "symbol": "$",
-    "name": "Australian Dollar"
+    "name": "Australian Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg"
   },
   {
     "code": "AWG",
     "symbol": "ƒ",
-    "name": "Aruban Guilder/Florin"
+    "name": "Aruban Guilder/Florin",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Aruba.svg"
   },
   {
     "code": "AZN",
     "symbol": "ман",
-    "name": "Azerbaijanian Manat"
+    "name": "Azerbaijanian Manat",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg"
   },
   {
     "code": "BAM",
     "symbol": "КМ",
-    "name": "Konvertibilna Marka"
+    "name": "Konvertibilna Marka",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg"
   },
   {
     "code": "BBD",
     "symbol": "$",
-    "name": "Barbados Dollar"
+    "name": "Barbados Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Flag_of_Barbados.svg"
   },
   {
     "code": "BDT",
     "symbol": "৳",
-    "name": "Taka"
+    "name": "Taka",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Flag_of_Bangladesh.svg"
   },
   {
     "code": "BGN",
     "symbol": "лв",
-    "name": "Bulgarian Lev"
+    "name": "Bulgarian Lev",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg"
   },
   {
     "code": "BHD",
     "symbol": "ب.د",
-    "name": "Bahraini Dinar"
+    "name": "Bahraini Dinar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Bahrain.svg"
   },
   {
     "code": "BIF",
     "symbol": "₣",
-    "name": "Burundi Franc"
+    "name": "Burundi Franc",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/5/50/Flag_of_Burundi.svg"
   },
   {
     "code": "BMD",
     "symbol": "$",
-    "name": "Bermudian Dollar"
+    "name": "Bermudian Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bermuda.svg"
   },
   {
     "code": "BND",
     "symbol": "$",
-    "name": "Brunei Dollar"
+    "name": "Brunei Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Brunei.svg"
   },
   {
     "code": "BOB",
     "symbol": "Bs.",
-    "name": "Boliviano"
+    "name": "Boliviano",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Bolivia.svg"
   },
   {
     "code": "BRL",
     "symbol": "R$",
-    "name": "Brazilian Real"
+    "name": "Brazilian Real",
+    "flag": "https://upload.wikimedia.org/wikipedia/en/0/05/Flag_of_Brazil.svg"
   },
   {
     "code": "BSD",
     "symbol": "$",
-    "name": "Bahamian Dollar"
+    "name": "Bahamian Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/9/93/Flag_of_the_Bahamas.svg"
   },
   {
     "code": "BTN",
     "symbol": "Nu",
-    "name": "Ngultrum"
+    "name": "Ngultrum",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/9/91/Flag_of_Bhutan.svg"
   },
   {
     "code": "BWP",
     "symbol": "P",
-    "name": "Pula"
+    "name": "Pula",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_Botswana.svg"
   },
   {
     "code": "BYN",
     "symbol": "Br",
-    "name": "Belarusian Ruble"
+    "name": "Belarusian Ruble",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/8/85/Flag_of_Belarus.svg"
   },
   {
     "code": "BZD",
     "symbol": "$",
-    "name": "Belize Dollar"
+    "name": "Belize Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Flag_of_Belize.svg"
   },
   {
     "code": "CAD",
     "symbol": "$",
-    "name": "Canadian Dollar"
+    "name": "Canadian Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/en/c/cf/Flag_of_Canada.svg"
   },
   {
     "code": "CDF",
     "symbol": "₣",
-    "name": "Congolese Franc"
+    "name": "Congolese Franc",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg"
   },
   {
     "code": "CHF",
     "symbol": "₣",
-    "name": "Swiss Franc"
+    "name": "Swiss Franc",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/0/08/Flag_of_Switzerland_%28Pantone%29.svg"
   },
   {
     "code": "CLP",
     "symbol": "$",
-    "name": "Chilean Peso"
+    "name": "Chilean Peso",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg"
   },
   {
     "code": "CNY",
     "symbol": "¥",
-    "name": "Yuan"
+    "name": "Yuan",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg"
   },
   {
     "code": "COP",
     "symbol": "$",
-    "name": "Colombian Peso"
+    "name": "Colombian Peso",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Colombia.svg"
   },
   {
     "code": "CRC",
     "symbol": "₡",
-    "name": "Costa Rican Colon"
+    "name": "Costa Rican Colon",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Flag_of_Costa_Rica.svg"
   },
   {
     "code": "CUP",
     "symbol": "$",
-    "name": "Cuban Peso"
+    "name": "Cuban Peso",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Flag_of_Cuba.svg"
   },
   {
     "code": "CVE",
     "symbol": "$",
-    "name": "Cape Verde Escudo"
+    "name": "Cape Verde Escudo",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Cape_Verde.svg"
   },
   {
     "code": "CZK",
     "symbol": "Kč",
-    "name": "Czech Koruna"
+    "name": "Czech Koruna",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg"
   },
   {
     "code": "DJF",
     "symbol": "₣",
-    "name": "Djibouti Franc"
+    "name": "Djibouti Franc",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/3/34/Flag_of_Djibouti.svg"
   },
   {
     "code": "DKK",
     "symbol": "kr",
-    "name": "Danish Krone"
+    "name": "Danish Krone",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg"
   },
   {
     "code": "DOP",
     "symbol": "$",
-    "name": "Dominican Peso"
+    "name": "Dominican Peso",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_the_Dominican_Republic.svg"
   },
   {
     "code": "DZD",
     "symbol": "د.ج",
-    "name": "Algerian Dinar"
+    "name": "Algerian Dinar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg"
   },
   {
     "code": "EGP",
     "symbol": "£",
-    "name": "Egyptian Pound"
+    "name": "Egyptian Pound",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg"
   },
   {
     "code": "ERN",
     "symbol": "Nfk",
-    "name": "Nakfa"
+    "name": "Nakfa",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/2/29/Flag_of_Eritrea.svg"
   },
   {
     "code": "ETB",
     "symbol": "ብር",
-    "name": "Ethiopian Birr"
+    "name": "Ethiopian Birr",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/7/71/Flag_of_Ethiopia.svg"
   },
   {
     "code": "EUR",
     "symbol": "€",
-    "name": "Euro"
+    "name": "Euro",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Flag_of_Europe.svg"
   },
   {
     "code": "FJD",
     "symbol": "$",
-    "name": "Fiji Dollar"
+    "name": "Fiji Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Fiji.svg"
   },
   {
     "code": "FKP",
     "symbol": "£",
-    "name": "Falkland Islands Pound"
+    "name": "Falkland Islands Pound",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_Falkland_Islands.svg"
   },
   {
     "code": "GBP",
     "symbol": "£",
-    "name": "Pound Sterling"
+    "name": "Pound Sterling",
+    "flag": "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
   },
   {
     "code": "GEL",
     "symbol": "ლ",
-    "name": "Lari"
+    "name": "Lari",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_Georgia.svg"
   },
   {
     "code": "GHS",
     "symbol": "₵",
-    "name": "Cedi"
+    "name": "Cedi",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Ghana.svg"
   },
   {
     "code": "GIP",
     "symbol": "£",
-    "name": "Gibraltar Pound"
+    "name": "Gibraltar Pound",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/0/02/Flag_of_Gibraltar.svg"
   },
   {
     "code": "GMD",
     "symbol": "D",
-    "name": "Dalasi"
+    "name": "Dalasi",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_The_Gambia.svg"
   },
   {
     "code": "GNF",
     "symbol": "₣",
-    "name": "Guinea Franc"
+    "name": "Guinea Franc",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Flag_of_Guinea.svg"
   },
   {
     "code": "GTQ",
     "symbol": "Q",
-    "name": "Quetzal"
+    "name": "Quetzal",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Flag_of_Guatemala.svg"
   },
   {
     "code": "GYD",
     "symbol": "$",
-    "name": "Guyana Dollar"
+    "name": "Guyana Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_Guyana.svg"
   },
   {
     "code": "HKD",
     "symbol": "$",
-    "name": "Hong Kong Dollar"
+    "name": "Hong Kong Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Flag_of_Hong_Kong.svg"
   },
   {
     "code": "HNL",
     "symbol": "L",
-    "name": "Lempira"
+    "name": "Lempira",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/8/82/Flag_of_Honduras.svg"
   },
   {
     "code": "HRK",
     "symbol": "Kn",
-    "name": "Croatian Kuna"
+    "name": "Croatian Kuna",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg"
   },
   {
     "code": "HTG",
     "symbol": "G",
-    "name": "Gourde"
+    "name": "Gourde",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Haiti.svg"
   },
   {
     "code": "HUF",
     "symbol": "Ft",
-    "name": "Forint"
+    "name": "Forint",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg"
   },
   {
     "code": "IDR",
     "symbol": "Rp",
-    "name": "Rupiah"
+    "name": "Rupiah",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Flag_of_Indonesia.svg"
   },
   {
     "code": "ILS",
     "symbol": "₪",
-    "name": "New Israeli Shekel"
+    "name": "New Israeli Shekel",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg"
   },
   {
     "code": "INR",
     "symbol": "₹",
-    "name": "Indian Rupee"
+    "name": "Indian Rupee",
+    "flag": "https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg"
   },
   {
     "code": "IQD",
     "symbol": "ع.د",
-    "name": "Iraqi Dinar"
+    "name": "Iraqi Dinar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Flag_of_Iraq.svg"
   },
   {
     "code": "IRR",
     "symbol": "﷼",
-    "name": "Iranian Rial"
+    "name": "Iranian Rial",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Flag_of_Iran.svg"
   },
   {
     "code": "ISK",
     "symbol": "Kr",
-    "name": "Iceland Krona"
+    "name": "Iceland Krona",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg"
   },
   {
     "code": "JMD",
     "symbol": "$",
-    "name": "Jamaican Dollar"
+    "name": "Jamaican Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Jamaica.svg"
   },
   {
     "code": "JOD",
     "symbol": "د.ا",
-    "name": "Jordanian Dinar"
+    "name": "Jordanian Dinar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Flag_of_Jordan.svg"
   },
   {
     "code": "JPY",
     "symbol": "¥",
-    "name": "Yen"
+    "name": "Yen",
+    "flag": "https://upload.wikimedia.org/wikipedia/en/9/9e/Flag_of_Japan.svg"
   },
   {
     "code": "KES",
     "symbol": "Sh",
-    "name": "Kenyan Shilling"
+    "name": "Kenyan Shilling",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Kenya.svg"
   },
   {
     "code": "KGS",
     "symbol": "Лв",
-    "name": "Som"
+    "name": "Som",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Flag_of_Somalia.svg"
   },
   {
     "code": "KHR",
     "symbol": "៛",
-    "name": "Riel"
+    "name": "Riel",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg"
   },
   {
     "code": "KPW",
     "symbol": "₩",
-    "name": "North Korean Won"
+    "name": "North Korean Won",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/5/51/Flag_of_North_Korea.svg"
   },
   {
     "code": "KRW",
     "symbol": "₩",
-    "name": "South Korean Won"
+    "name": "South Korean Won",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/0/09/Flag_of_South_Korea.svg"
   },
   {
     "code": "KWD",
     "symbol": "د.ك",
-    "name": "Kuwaiti Dinar"
+    "name": "Kuwaiti Dinar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Flag_of_Kuwait.svg"
   },
   {
     "code": "KYD",
     "symbol": "$",
-    "name": "Cayman Islands Dollar"
+    "name": "Cayman Islands Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_the_Cayman_Islands.svg"
   },
   {
     "code": "KZT",
     "symbol": "〒",
-    "name": "Tenge"
+    "name": "Tenge",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kazakhstan.svg"
   },
   {
     "code": "LAK",
     "symbol": "₭",
-    "name": "Kip"
+    "name": "Kip",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Laos.svg"
   },
   {
     "code": "LBP",
     "symbol": "ل.ل",
-    "name": "Lebanese Pound"
+    "name": "Lebanese Pound",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Laos.svg"
   },
   {
     "code": "LKR",
     "symbol": "Rs",
-    "name": "Sri Lanka Rupee"
+    "name": "Sri Lanka Rupee",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Sri_Lanka.svg"
   },
   {
     "code": "LRD",
     "symbol": "$",
-    "name": "Liberian Dollar"
+    "name": "Liberian Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Flag_of_Liberia.svg"
   },
   {
     "code": "LSL",
     "symbol": "L",
-    "name": "Loti"
+    "name": "Loti",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Flag_of_Lesotho.svg"
   },
   {
     "code": "LYD",
     "symbol": "ل.د",
-    "name": "Libyan Dinar"
+    "name": "Libyan Dinar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Libya.svg"
   },
   {
     "code": "MAD",
     "symbol": "د.م.",
-    "name": "Moroccan Dirham"
+    "name": "Moroccan Dirham",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg"
   },
   {
     "code": "MDL",
     "symbol": "L",
-    "name": "Moldovan Leu"
+    "name": "Moldovan Leu",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Moldova.svg"
   },
   {
     "code": "MGA",
     "symbol": "Ar",
-    "name": "Malagasy Ariary"
+    "name": "Malagasy Ariary",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Madagascar.svg"
   },
   {
     "code": "MKD",
     "symbol": "ден",
-    "name": "Denar"
+    "name": "Denar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Flag_of_Macedonia.svg"
   },
   {
     "code": "MMK",
     "symbol": "K",
-    "name": "Kyat"
+    "name": "Kyat",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Flag_of_Myanmar.svg"
   },
   {
     "code": "MNT",
     "symbol": "₮",
-    "name": "Tugrik"
+    "name": "Tugrik",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Mongolia.svg"
   },
   {
     "code": "MOP",
     "symbol": "P",
-    "name": "Pataca"
+    "name": "Pataca",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/6/63/Flag_of_Macau.svg"
   },
   {
     "code": "MRU",
     "symbol": "UM",
-    "name": "Ouguiya"
+    "name": "Ouguiya",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/4/43/Flag_of_Mauritania.svg"
   },
   {
     "code": "MUR",
     "symbol": "₨",
-    "name": "Mauritius Rupee"
+    "name": "Mauritius Rupee",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Mauritius.svg"
   },
   {
     "code": "MVR",
     "symbol": "ރ.",
-    "name": "Rufiyaa"
+    "name": "Rufiyaa",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_Maldives.svg"
   },
   {
     "code": "MWK",
     "symbol": "MK",
-    "name": "Kwacha"
+    "name": "Kwacha",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Zambia.svg"
   },
   {
     "code": "MXN",
     "symbol": "$",
-    "name": "Mexican Peso"
+    "name": "Mexican Peso",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg"
   },
   {
     "code": "MYR",
     "symbol": "RM",
-    "name": "Malaysian Ringgit"
+    "name": "Malaysian Ringgit",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/6/66/Flag_of_Malaysia.svg"
   },
   {
     "code": "MZN",
     "symbol": "MTn",
-    "name": "Metical"
+    "name": "Metical",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_Mozambique.svg"
   },
   {
     "code": "NAD",
     "symbol": "$",
-    "name": "Namibia Dollar"
+    "name": "Namibia Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Namibia.svg"
   },
   {
     "code": "NGN",
     "symbol": "₦",
-    "name": "Naira"
+    "name": "Naira",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg"
   },
   {
     "code": "NIO",
     "symbol": "C$",
-    "name": "Cordoba Oro"
+    "name": "Cordoba Oro",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Nicaragua.svg"
   },
   {
     "code": "NOK",
     "symbol": "kr",
-    "name": "Norwegian Krone"
+    "name": "Norwegian Krone",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg"
   },
   {
     "code": "NPR",
     "symbol": "₨",
-    "name": "Nepalese Rupee"
+    "name": "Nepalese Rupee",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg"
   },
   {
     "code": "NZD",
     "symbol": "$",
-    "name": "New Zealand Dollar"
+    "name": "New Zealand Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg"
   },
   {
     "code": "OMR",
     "symbol": "ر.ع.",
-    "name": "Rial Omani"
+    "name": "Rial Omani",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Oman.svg"
   },
   {
     "code": "PAB",
     "symbol": "B/.",
-    "name": "Balboa"
+    "name": "Balboa",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Flag_of_Panama.svg"
   },
   {
     "code": "PEN",
     "symbol": "S/.",
-    "name": "Nuevo Sol"
+    "name": "Nuevo Sol",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg"
   },
   {
     "code": "PGK",
     "symbol": "K",
-    "name": "Kina"
+    "name": "Kina",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Flag_of_Papua_New_Guinea.svg"
   },
   {
     "code": "PHP",
     "symbol": "₱",
-    "name": "Philippine Peso"
+    "name": "Philippine Peso",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/9/99/Flag_of_the_Philippines.svg"
   },
   {
     "code": "PKR",
     "symbol": "₨",
-    "name": "Pakistan Rupee"
+    "name": "Pakistan Rupee",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg"
   },
   {
     "code": "PLN",
     "symbol": "zł",
-    "name": "PZloty"
+    "name": "PZloty",
+    "flag": "https://upload.wikimedia.org/wikipedia/en/1/12/Flag_of_Poland.svg"
   },
   {
     "code": "PYG",
     "symbol": "₲",
-    "name": "Guarani"
+    "name": "Guarani",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Paraguay.svg"
   },
   {
     "code": "QAR",
     "symbol": "ر.ق",
-    "name": "Qatari Rial"
+    "name": "Qatari Rial",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Qatar.svg"
   },
   {
     "code": "RON",
     "symbol": "L",
-    "name": "Leu"
+    "name": "Leu",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg"
   },
   {
     "code": "RSD",
     "symbol": "din",
-    "name": "Serbian Dinar"
+    "name": "Serbian Dinar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg"
   },
   {
     "code": "RUB",
     "symbol": "р.",
-    "name": "Russian Ruble"
+    "name": "Russian Ruble",
+    "flag": "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg"
   },
   {
     "code": "RWF",
     "symbol": "₣",
-    "name": "Rwanda Franc"
+    "name": "Rwanda Franc",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_Rwanda.svg"
   },
   {
     "code": "SAR",
     "symbol": "ر.س",
-    "name": "Saudi Riyal"
+    "name": "Saudi Riyal",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg"
   },
   {
     "code": "SBD",
     "symbol": "$",
-    "name": "Solomon Islands Dollar"
+    "name": "Solomon Islands Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/7/74/Flag_of_the_Solomon_Islands.svgƒ"
   },
   {
     "code": "SCR",
     "symbol": "₨",
-    "name": "Seychelles Rupee"
+    "name": "Seychelles Rupee",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Seychelles.svg"
   },
   {
     "code": "SDG",
     "symbol": "£",
-    "name": "Sudanese Pound"
+    "name": "Sudanese Pound",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/0/01/Flag_of_Sudan.svg"
   },
   {
     "code": "SEK",
     "symbol": "kr",
-    "name": "Swedish Krona"
+    "name": "Swedish Krona",
+    "flag": "https://upload.wikimedia.org/wikipedia/en/4/4c/Flag_of_Sweden.svg"
   },
   {
     "code": "SGD",
     "symbol": "$",
-    "name": "Singapore Dollar"
+    "name": "Singapore Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Singapore.svg"
   },
   {
     "code": "SHP",
     "symbol": "£",
-    "name": "Saint Helena Pound"
+    "name": "Saint Helena Pound",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_Saint_Helena.svg"
   },
   {
     "code": "SLL",
     "symbol": "Le",
-    "name": "Leone"
+    "name": "Leone",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/1/17/Flag_of_Sierra_Leone.svg"
   },
   {
     "code": "SOS",
     "symbol": "Sh",
-    "name": "Somali Shilling"
+    "name": "Somali Shilling",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Flag_of_Somalia.svg"
   },
   {
     "code": "SRD",
     "symbol": "$",
-    "name": "Suriname Dollar"
+    "name": "Suriname Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/6/60/Flag_of_Suriname.svg"
   },
   {
     "code": "STN",
     "symbol": "Db",
-    "name": "Dobra"
+    "name": "Dobra",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Flag_of_Sao_Tome_and_Principe.svg"
   },
   {
     "code": "SYP",
     "symbol": "ل.س",
-    "name": "Syrian Pound"
+    "name": "Syrian Pound",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/5/53/Flag_of_Syria.svg"
   },
   {
     "code": "SZL",
     "symbol": "L",
-    "name": "Lilangeni"
+    "name": "Lilangeni",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Flag_of_Eswatini.svg"
   },
   {
     "code": "THB",
     "symbol": "฿",
-    "name": "Baht"
+    "name": "Baht",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg"
   },
   {
     "code": "TJS",
     "symbol": "ЅМ",
-    "name": "Somoni"
+    "name": "Somoni",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Flag_of_Tajikistan.svg"
   },
   {
     "code": "TMT",
     "symbol": "m",
-    "name": "Manat"
+    "name": "Manat",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Azerbaijan.svg"
   },
   {
     "code": "TND",
     "symbol": "د.ت",
-    "name": "Tunisian Dinar"
+    "name": "Tunisian Dinar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Tunisia.svg"
   },
   {
     "code": "TOP",
     "symbol": "T$",
-    "name": "Pa’anga"
+    "name": "Pa’anga",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Tonga.svg"
   },
   {
     "code": "TRY",
     "symbol": "₤",
-    "name": "Turkish Lira"
+    "name": "Turkish Lira",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg"
   },
   {
     "code": "TTD",
     "symbol": "$",
-    "name": "Trinidad and Tobago Dollar"
+    "name": "Trinidad and Tobago Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Trinidad_and_Tobago.svg"
   },
   {
     "code": "TWD",
     "symbol": "$",
-    "name": "Taiwan Dollar"
+    "name": "Taiwan Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/7/72/Flag_of_the_Republic_of_China.svg"
   },
   {
     "code": "TZS",
     "symbol": "Sh",
-    "name": "Tanzanian Shilling"
+    "name": "Tanzanian Shilling",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/3/38/Flag_of_Tanzania.svg"
   },
   {
     "code": "UAH",
     "symbol": "₴",
-    "name": "Hryvnia"
+    "name": "Hryvnia",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg"
   },
   {
     "code": "UGX",
     "symbol": "Sh",
-    "name": "Uganda Shilling"
+    "name": "Uganda Shilling",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Flag_of_Uganda.svg"
   },
   {
     "code": "USD",
     "symbol": "$",
-    "name": "US Dollar"
+    "name": "US Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/US_flag_51_stars.svg/640px-US_flag_51_stars.svg.png"
   },
   {
     "code": "UYU",
     "symbol": "$",
-    "name": "Peso Uruguayo"
+    "name": "Peso Uruguayo",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Uruguay.svg"
   },
   {
     "code": "UZS",
     "symbol": "",
-    "name": "Uzbekistan Sum"
+    "name": "Uzbekistan Sum",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Uzbekistan.svg"
   },
   {
     "code": "VEF",
     "symbol": "Bs F",
-    "name": "Bolivar Fuerte"
+    "name": "Bolivar Fuerte",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/4/48/Flag_of_Bolivia.svg"
   },
   {
     "code": "VND",
     "symbol": "₫",
-    "name": "Dong"
+    "name": "Dong",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg"
   },
   {
     "code": "VUV",
     "symbol": "Vt",
-    "name": "Vatu"
+    "name": "Vatu",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Vanuatu.svg"
   },
   {
     "code": "WST",
     "symbol": "T",
-    "name": "Tala"
+    "name": "Tala",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Samoa.svg/2880px-Flag_of_Samoa.svg.png"
   },
   {
     "code": "XAF",
     "symbol": "₣",
-    "name": "CFA Franc BCEAO"
+    "name": "CFA Franc BCEAO",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/480px-Solid_white.svg.png"
   },
   {
     "code": "XCD",
     "symbol": "$",
-    "name": "East Caribbean Dollar"
+    "name": "East Caribbean Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/480px-Solid_white.svg.png"
   },
   {
     "code": "XPF",
     "symbol": "₣",
-    "name": "CFP Franc"
+    "name": "CFP Franc",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Solid_white.svg/480px-Solid_white.svg.png"
   },
   {
     "code": "YER",
     "symbol": "﷼",
-    "name": "Yemeni Rial"
+    "name": "Yemeni Rial",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/8/89/Flag_of_Yemen.svg"
   },
   {
     "code": "ZAR",
     "symbol": "R",
-    "name": "Rand"
+    "name": "Rand",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg"
   },
   {
     "code": "ZMW",
     "symbol": "ZK",
-    "name": "Zambian Kwacha"
+    "name": "Zambian Kwacha",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/0/06/Flag_of_Zambia.svg"
   },
   {
     "code": "ZWL",
     "symbol": "$",
-    "name": "Zimbabwe Dollar"
+    "name": "Zimbabwe Dollar",
+    "flag": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Flag_of_Zimbabwe.svg"
   }
 ]

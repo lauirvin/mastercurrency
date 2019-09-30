@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import draggable from "../../media/icons/list.svg";
-import flag from "../../media/flags/gbp.svg";
 
 const Currency = props => {
   const [value, setValue] = useState(1);
@@ -13,7 +12,7 @@ const Currency = props => {
   return (
     <div className={`currency ${props.modClass}`}>
       <div className="currency-content">
-        <img alt="flag" className="flag" src={flag} />
+        <img alt="flag" className="flag" src={`${props.flag}`} />
         <div className="currency-content-title">
           <h3>{props.code}</h3>
           <p>{props.name}</p>
