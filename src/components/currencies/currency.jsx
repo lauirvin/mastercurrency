@@ -37,7 +37,7 @@ const Currency = props => {
             className="draggable-handle-icon"
             src={draggable}
           />
-          <button onClick={removeCurrency}>X</button>
+          <button className="delete" onClick={removeCurrency}></button>
         </div>
       </div>
     </div>

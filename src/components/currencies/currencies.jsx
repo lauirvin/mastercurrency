@@ -236,16 +236,18 @@ const Currencies = () => {
     <div className="currencies">
       <div className="currencies-controls">
         <button id="edit" onClick={editCurrency}>
-          Edit
+          <span>Edit</span>
         </button>
         <button onClick={doneEditing} id="done">
-          Done
+          <span>Done</span>
         </button>
         <button onClick={cancelEdit} id="cancel">
-          Cancel
+          <span>Cancel</span>
         </button>
         <Select
           className="options"
+          classNamePrefix="options"
+          placeholder="Add currency"
           value={"Add Currency"}
           onChange={addCurrency}
           options={options}
