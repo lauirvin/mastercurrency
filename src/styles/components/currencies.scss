@@ -1,6 +1,27 @@
-.currencies-container {
+.currencies {
   display: flex;
   flex-direction: column;
+
+  &-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 1.5rem;
+
+    button {
+      width: 20%;
+      margin-right: 2rem;
+    }
+
+    .options {
+      width: 35%;
+    }
+
+    #done,
+    #cancel {
+      display: none;
+    }
+  }
 
   .currency {
     border-radius: 10px;
@@ -8,42 +29,6 @@
     width: 60rem;
     height: 9rem;
     margin-bottom: 1.5rem;
-
-    &.mod-selected {
-      background: linear-gradient(90deg, $coral 0%, $peach 100%);
-
-      h3,
-      p,
-      input {
-        color: $white;
-        &::placeholder {
-          color: $white;
-        }
-      }
-      input {
-        display: block;
-        border-bottom: 1px solid $white;
-      }
-      hr {
-        border-left: 1px solid $white;
-      }
-      .flag {
-        border: 1px solid $white;
-      }
-      .draggable-handle {
-        &-icon {
-          filter: brightness(10000%) contrast(10000%);
-        }
-      }
-
-      .currency {
-        &-content {
-          &-conversion {
-            display: none;
-          }
-        }
-      }
-    }
 
     &-content {
       display: flex;
@@ -108,6 +93,60 @@
           width: 3rem;
           margin-left: 2rem;
           margin-right: 2rem;
+        }
+
+        button {
+          display: none;
+          width: 3rem;
+          margin-left: 2rem;
+          margin-right: 2rem;
+        }
+      }
+    }
+
+    &.mod-edit {
+      .currency-content {
+        .draggable-handle {
+          &-icon {
+            display: none;
+          }
+          button {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &.mod-selected {
+      background: linear-gradient(90deg, $coral 0%, $peach 100%);
+
+      h3,
+      p,
+      input {
+        color: $white;
+        &::placeholder {
+          color: $white;
+        }
+      }
+      input {
+        display: block;
+        border-bottom: 1px solid $white;
+      }
+      hr {
+        border-left: 1px solid $white;
+      }
+      .flag {
+        border: 1px solid $white;
+      }
+      .draggable-handle {
+        &-icon {
+          filter: brightness(10000%) contrast(10000%);
+        }
+      }
+
+      .currency-content {
+        &-conversion {
+          display: none;
         }
       }
     }

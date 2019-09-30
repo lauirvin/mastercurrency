@@ -7,6 +7,79 @@ import Currency from "./currency";
 import currencyData from "../../data/countries.json";
 
 const Currencies = () => {
+  const removeCurrency = code => {
+    let list = [];
+
+    for (var i in items) {
+      if (items[i].code === code) {
+        items.splice(i, 1);
+      }
+    }
+    updateItems(list.concat(items));
+    return list.concat(items);
+  };
+
+  const doneEditing = () => {
+    document.getElementById("edit").style.display = "block";
+    document.getElementById("done").style.display = "none";
+    document.getElementById("cancel").style.display = "none";
+    document.getElementsByClassName("options")[0].style.display = "block";
+    document.getElementsByClassName("draggable-handle")[0].style.visibility =
+      "visible";
+
+    const doneItems = [];
+
+    doneItems.unshift(items[0]);
+    const itemsToFinish = items.slice(1);
+    for (var i in itemsToFinish) {
+      itemsToFinish[i].modClass = "";
+      doneItems.push(itemsToFinish[i]);
+    }
+
+    updateItems(doneItems);
+
+    for (var i in holdItems) {
+      // Find out which item have been deleted
+      if (doneItems.includes(holdItems[i]) === false) {
+        // Create an object (value and label) for the deleted item
+        const deletedItem = {
+          id: `${holdItems[i].id}`,
+          value: `${holdItems[i].code}`,
+          label: `${holdItems[i].code} - ${holdItems[i].name}`
+        };
+        // Add the object to the options list
+        options.push(deletedItem);
+        // Sort the options list to ID order
+        const sortedOptions = options.sort((a, b) => {
+          return a.id - b.id;
+        });
+
+        // Update options
+        updateOptions(sortedOptions);
+      }
+    }
+  };
+
+  const cancelEdit = () => {
+    document.getElementById("edit").style.display = "block";
+    document.getElementById("done").style.display = "none";
+    document.getElementById("cancel").style.display = "none";
+    document.getElementsByClassName("options")[0].style.display = "block";
+    document.getElementsByClassName("draggable-handle")[0].style.visibility =
+      "visible";
+
+    const cancelItems = [];
+
+    cancelItems.unshift(holdItems[0]);
+    const itemsToCancel = holdItems.slice(1);
+    for (var i in itemsToCancel) {
+      itemsToCancel[i].modClass = "";
+      cancelItems.push(itemsToCancel[i]);
+    }
+
+    updateItems(cancelItems);
+  };
+
   const mainCurrency = items => {
     items[0].modClass = "mod-selected";
 
@@ -16,6 +89,28 @@ const Currencies = () => {
         unselectedItems[i].modClass = "";
       }
     }
+  };
+
+  const editCurrency = () => {
+    document.getElementById("edit").style.display = "none";
+    document.getElementById("done").style.display = "block";
+    document.getElementById("cancel").style.display = "block";
+    document.getElementsByClassName("options")[0].style.display = "none";
+    document.getElementsByClassName("draggable-handle")[0].style.visibility =
+      "hidden";
+
+    const editItems = [];
+
+    editItems.push(items[0]);
+
+    const itemsToEdit = items.slice(1);
+    for (var i in itemsToEdit) {
+      itemsToEdit[i].modClass = "mod-edit";
+      editItems.push(itemsToEdit[i]);
+    }
+
+    updateHoldItems(items);
+    updateItems(editItems);
   };
 
   const addCurrency = currency => {
@@ -123,6 +218,7 @@ const Currencies = () => {
   };
 
   const [currencies, updateCurrencyList] = useState(fetchCurrencies());
+  const [holdItems, updateHoldItems] = useState();
   const [items, updateItems] = useState();
   const [options, updateOptions] = useState();
 
@@ -137,8 +233,24 @@ const Currencies = () => {
   }, []);
 
   return (
-    <div className="currencies-container">
-      <Select value={"Add Currency"} onChange={addCurrency} options={options} />
+    <div className="currencies">
+      <div className="currencies-controls">
+        <button id="edit" onClick={editCurrency}>
+          Edit
+        </button>
+        <button onClick={doneEditing} id="done">
+          Done
+        </button>
+        <button onClick={cancelEdit} id="cancel">
+          Cancel
+        </button>
+        <Select
+          className="options"
+          value={"Add Currency"}
+          onChange={addCurrency}
+          options={options}
+        />
+      </div>
 
       <DragDropContext onDragEnd={onDragEnd}>
         <Droppable droppableId="droppable">
@@ -150,6 +262,7 @@ const Currencies = () => {
                     {(provided, snapshot) => (
                       <div ref={provided.innerRef} {...provided.draggableProps}>
                         <Currency
+                          selectedCode={removeCurrency}
                           dragHandle={provided.dragHandleProps}
                           code={item.code}
                           name={item.name}

@@ -6,6 +6,10 @@ import flag from "../../media/flags/gbp.svg";
 const Currency = props => {
   const [value, setValue] = useState(1);
 
+  const removeCurrency = () => {
+    props.selectedCode(props.code);
+  };
+
   return (
     <div className={`currency ${props.modClass}`}>
       <div className="currency-content">
@@ -26,8 +30,14 @@ const Currency = props => {
           <p>1 HKD = 0.1017 GBP</p>
         </div>
         <hr />
-        <div className="draggable-handle" {...props.dragHandle}>
-          <img alt="list" className="draggable-handle-icon" src={draggable} />
+        <div className="draggable-handle">
+          <img
+            {...props.dragHandle}
+            alt="list"
+            className="draggable-handle-icon"
+            src={draggable}
+          />
+          <button onClick={removeCurrency}>X</button>
         </div>
       </div>
     </div>
