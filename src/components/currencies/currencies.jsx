@@ -181,7 +181,7 @@ const Currencies = () => {
 
         for (var i in currencies) {
           if (currencies[i].code === data.currency) {
-            list.push(currencies[i]);
+            list.unshift(currencies[i]);
             return list;
           }
         }
@@ -263,14 +263,17 @@ const Currencies = () => {
                 items.map((item, index) => (
                   <Draggable key={item.id} draggableId={item.id} index={index}>
                     {(provided, snapshot) => (
-                      <div ref={provided.innerRef} {...provided.draggableProps}>
+                      <div
+                        className={`currency ${item.modClass}`}
+                        ref={provided.innerRef}
+                        {...provided.draggableProps}
+                      >
                         <Currency
                           selectedCode={removeCurrency}
                           dragHandle={provided.dragHandleProps}
                           code={item.code}
                           name={item.name}
                           flag={item.flag}
-                          modClass={item.modClass}
                         />
                       </div>
                     )}
