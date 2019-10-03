@@ -1,13 +1,44 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 import draggable from "../../media/icons/list.svg";
 
 const Currency = props => {
   const [value, setValue] = useState(1);
+  const [currencyRate, setRate] = useState();
+  const [conversionRate, setConversion] = useState();
 
   const removeCurrency = () => {
     props.selectedCode(props.code);
   };
+
+  const handleInputChange = e => {
+    setValue(e.target.value);
+  };
+
+  const currentInputOnLoad = () => {
+    props.enteredInput(value);
+  };
+
+  const currentInput = e => {
+    props.enteredInput(e.target.value);
+  };
+
+  const currencyConversion = async () => {
+    await axios
+      .get(
+        `https://api.exchangeratesapi.io/latest?base=${props.base}&symbols=${props.code}`
+      )
+      .then(response => {
+        const data = response.data;
+        setRate(data.rates[props.code]);
+      });
+  };
+
+  useEffect(() => {
+    currentInputOnLoad();
+    currencyConversion();
+  }, []);
 
   return (
     <div className="currency-content">
@@ -20,12 +51,15 @@ const Currency = props => {
         type="number"
         step="0.01"
         defaultValue="1.0000"
-        placeholder="1.0000"
-        onChange={e => setValue(e.target.value)}
+        placeholder="0"
+        onChange={currentInput}
+        onBlur={currentInput}
       />
       <div className="currency-content-conversion">
-        <h3>9.8329</h3>
-        <p>1 HKD = 0.1017 GBP</p>
+        <h3>{(props.input * currencyRate).toString()}</h3>
+        <p>
+          1 {props.code} = {currencyRate} {props.base}
+        </p>
       </div>
       <hr />
       <div className="draggable-handle">

@@ -222,6 +222,7 @@ const Currencies = () => {
   const [holdItems, updateHoldItems] = useState();
   const [items, updateItems] = useState();
   const [options, updateOptions] = useState();
+  const [input, updateCurrentInput] = useState();
 
   useEffect(() => {
     fetchUserLocation(fetchCurrencies()).then(value => {
@@ -232,6 +233,11 @@ const Currencies = () => {
       }
     });
   }, []);
+
+  const currentInput = value => {
+    console.log(value)
+    updateCurrentInput(value);
+  };
 
   return (
     <div className="currencies">
@@ -270,10 +276,13 @@ const Currencies = () => {
                       >
                         <Currency
                           selectedCode={removeCurrency}
+                          enteredInput={currentInput}
                           dragHandle={provided.dragHandleProps}
+                          input={input}
                           code={item.code}
                           name={item.name}
                           flag={item.flag}
+                          base={items[0].code}
                         />
                       </div>
                     )}
