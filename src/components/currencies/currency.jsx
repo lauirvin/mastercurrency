@@ -4,9 +4,8 @@ import axios from "axios";
 import draggable from "../../media/icons/list.svg";
 
 const Currency = props => {
-  const [value, setValue] = useState(1);
   const [currencyRate, setRate] = useState();
-  const [conversionRate, setConversion] = useState();
+  const [conversion, setConversion] = useState();
 
   const removeCurrency = () => {
     props.selectedCode(props.code);
@@ -23,11 +22,15 @@ const Currency = props => {
       )
       .then(response => {
         const data = response.data;
+
         setRate(data.rates[props.code]);
+        setConversion((props.input * currencyRate).toFixed(2).toString());
       });
   };
 
-  useEffect(() => {}, [currencyConversion()]);
+  useEffect(() => {
+    currencyConversion();
+  });
 
   return (
     <div className="currency-content">
@@ -45,7 +48,7 @@ const Currency = props => {
         onBlur={handleInputChange}
       />
       <div className="currency-content-conversion">
-        <h3>{(props.input * currencyRate).toString()}</h3>
+        <h3>{conversion}</h3>
         <p>
           1 {props.code} = {currencyRate} {props.base}
         </p>

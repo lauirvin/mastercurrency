@@ -39,16 +39,16 @@ const Currencies = () => {
 
     updateItems(doneItems);
 
-    for (var i in holdItems) {
+    for (var j in holdItems) {
       // Find out which item have been deleted
-      if (doneItems.includes(holdItems[i]) === false) {
+      if (doneItems.includes(holdItems[j]) === false) {
         // Create an object (value and label) for the deleted item
 
-        holdItems[i].modClass = "";
+        holdItems[j].modClass = "";
         const deletedItem = {
-          id: `${holdItems[i].id}`,
-          value: `${holdItems[i].code}`,
-          label: `${holdItems[i].code} - ${holdItems[i].name}`
+          id: `${holdItems[j].id}`,
+          value: `${holdItems[j].code}`,
+          label: `${holdItems[j].code} - ${holdItems[j].name}`
         };
         // Add the object to the options list
         options.push(deletedItem);
@@ -233,10 +233,10 @@ const Currencies = () => {
       }
     }
 
-    for (var i in currencyList) {
-      const country = currencyList[i];
+    for (var id in currencyList) {
+      const country = currencyList[id];
       const options = {
-        id: `${i}`,
+        id: `${id}`,
         value: `${country.code}`,
         label: `${country.code} - ${country.name}`
       };
