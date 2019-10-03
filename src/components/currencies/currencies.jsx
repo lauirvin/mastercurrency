@@ -196,24 +196,37 @@ const Currencies = () => {
   };
 
   const fetchUserLocation = async currencies => {
-    let list = [currencies[32], currencies[26], currencies[29]]; // Default list of items
+    let list = [currencies[31], currencies[9], currencies[8]]; // Default list of items
 
     const currentLocation = await axios
       .get("https://ipapi.co/json/")
       .then(response => {
         const data = response.data;
 
+        let userCurrency;
         for (var i in currencies) {
           if (currencies[i].code === data.currency) {
-            list.unshift(currencies[i]);
-            return list;
+            userCurrency = currencies[i];
           }
         }
+
+        let match = false;
+        for (var j in list) {
+          if (list[j] === userCurrency) {
+            match = true;
+            break;
+          }
+        }
+        if (!match) {
+          list.unshift(userCurrency);
+          console.log(list);
+        }
+
+        return list;
       })
       .catch(error => {
-        return {
-          currency: "GBP"
-        };
+        console.log("Unable to detect location");
+        return list;
       });
 
     return currentLocation;
@@ -271,8 +284,6 @@ const Currencies = () => {
   const handleInputChange = value => {
     updateInputChange(value);
   };
-
-  console.log(options);
 
   return (
     <div className="currencies">

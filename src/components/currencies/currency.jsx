@@ -16,16 +16,18 @@ const Currency = props => {
   };
 
   const currencyConversion = async () => {
-    await axios
-      .get(
-        `https://api.exchangeratesapi.io/latest?base=${props.base}&symbols=${props.code}`
-      )
-      .then(response => {
-        const data = response.data;
+    if (props.base !== props.code) {
+      await axios
+        .get(
+          `https://api.exchangeratesapi.io/latest?base=${props.base}&symbols=${props.code}`
+        )
+        .then(response => {
+          const data = response.data;
 
-        setRate(data.rates[props.code].toFixed(4));
-        setConversion((props.input * currencyRate).toFixed(4).toString());
-      });
+          setRate(data.rates[props.code].toFixed(4));
+          setConversion((props.input * currencyRate).toFixed(4).toString());
+        });
+    }
   };
 
   useEffect(() => {
