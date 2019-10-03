@@ -15,6 +15,7 @@ const Currencies = () => {
         items.splice(i, 1);
       }
     }
+
     updateItems(list.concat(items));
     return list.concat(items);
   };
@@ -42,6 +43,8 @@ const Currencies = () => {
       // Find out which item have been deleted
       if (doneItems.includes(holdItems[i]) === false) {
         // Create an object (value and label) for the deleted item
+
+        holdItems[i].modClass = "";
         const deletedItem = {
           id: `${holdItems[i].id}`,
           value: `${holdItems[i].code}`,
@@ -125,7 +128,6 @@ const Currencies = () => {
             const newItems = [...items];
 
             newItems.push(currencies[j]);
-
             updateItems(newItems);
           }
         }
@@ -157,23 +159,40 @@ const Currencies = () => {
     mainCurrency(newOrder);
   };
 
-  const fetchCurrencies = () => {
-    let list = [];
-    currencyData.forEach((country, id) => {
-      const currency = {
-        id: `${id}`,
-        code: `${country.code}`,
-        name: `${country.name}`,
-        flag: `${country.flag}`,
-        modClass: ``
-      };
-      list.push(currency);
+  const fetchCurrencies = async () => {
+    const currencyList = await axios
+      .get("https://api.exchangeratesapi.io/latest")
+      .then(response => {
+        const rates = Object.keys(response.data.rates);
+        rates.push(response.data.base);
+        rates.sort();
+
+        let list = [];
+        for (var i in currencyData) {
+          for (var j in rates) {
+            if (currencyData[i].code === rates[j]) {
+              const currency = {
+                id: `${j}`,
+                code: `${currencyData[i].code}`,
+                name: `${currencyData[i].name}`,
+                flag: `${currencyData[i].flag}`,
+                modClass: ``
+              };
+              list.push(currency);
+            }
+          }
+        }
+        return list;
+      });
+    const sortedList = currencyList.sort((a, b) => {
+      return a.id - b.id;
     });
-    return list;
+
+    return sortedList;
   };
 
   const fetchUserLocation = async currencies => {
-    let list = [currencies[44], currencies[137], currencies[41]]; // Default list of items
+    let list = [currencies[32], currencies[26], currencies[29]]; // Default list of items
 
     const currentLocation = await axios
       .get("https://ipapi.co/json/")
@@ -189,7 +208,7 @@ const Currencies = () => {
       })
       .catch(error => {
         return {
-          currency: "HKD"
+          currency: "GBP"
         };
       });
 
@@ -197,46 +216,55 @@ const Currencies = () => {
   };
 
   const fetchOptions = (currencies, items) => {
+    let currencyList = [...currencies];
+
     let list = [];
-    for (var id in currencies) {
-      const country = currencies[id];
+
+    for (var i in currencyList) {
+      var match = false;
+      for (var j in items) {
+        if (currencyList[i].code === items[j].code) {
+          match = true;
+          break;
+        }
+      }
+      if (match) {
+        currencyList.splice(i, 1);
+      }
+    }
+
+    for (var i in currencyList) {
+      const country = currencyList[i];
       const options = {
-        id: `${id}`,
+        id: `${i}`,
         value: `${country.code}`,
         label: `${country.code} - ${country.name}`
       };
       list.push(options);
     }
 
-    for (var e in list) {
-      for (var i in items) {
-        if (list[e].value === items[i].code) {
-          list.splice(e, 1);
-        }
-      }
-    }
-
     return list;
   };
 
-  const [currencies, updateCurrencyList] = useState(fetchCurrencies());
+  const [currencies, updateCurrencyList] = useState();
   const [holdItems, updateHoldItems] = useState();
   const [items, updateItems] = useState();
   const [options, updateOptions] = useState();
   const [currentInput, updateInputChange] = useState(1);
 
   useEffect(() => {
-    fetchUserLocation(fetchCurrencies()).then(value => {
-      if (value !== undefined) {
+    fetchCurrencies().then(list => {
+      updateCurrencyList(list);
+
+      fetchUserLocation(list).then(value => {
         updateItems(value);
         mainCurrency(value);
-        updateOptions(fetchOptions(currencies, value));
-      }
+        updateOptions(fetchOptions(list, value));
+      });
     });
   }, []);
 
   const handleInputChange = value => {
-    console.log(value);
     updateInputChange(value);
   };
 
