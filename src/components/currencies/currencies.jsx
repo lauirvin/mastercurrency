@@ -285,6 +285,8 @@ const Currencies = () => {
           classNamePrefix="options"
           placeholder="Add currency"
           value={"Add Currency"}
+          inputProps={{ readOnly: true }}
+          isSearchable={false}
           onChange={addCurrency}
           options={options}
         />

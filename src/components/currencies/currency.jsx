@@ -23,8 +23,8 @@ const Currency = props => {
       .then(response => {
         const data = response.data;
 
-        setRate(data.rates[props.code]);
-        setConversion((props.input * currencyRate).toFixed(2).toString());
+        setRate(data.rates[props.code].toFixed(4));
+        setConversion((props.input * currencyRate).toFixed(4).toString());
       });
   };
 
@@ -40,6 +40,7 @@ const Currency = props => {
         <p>{props.name}</p>
       </div>
       <input
+        inputMode="decimal"
         type="number"
         step="0.01"
         defaultValue="1.0000"

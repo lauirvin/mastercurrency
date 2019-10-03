@@ -86,8 +86,23 @@ main {
 }
 
 @include mobileView() {
+  html {
+    font-size: 58%;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+  }
   main {
-    margin: 4% 4% 4% 4%;
+    margin: 1%;
+    padding: 0;
+    .components-container {
+      width: 100%;
+
+      .currencies {
+        width: 100%;
+      }
+    }
   }
   header {
     display: none;

@@ -11,6 +11,7 @@
 
     button {
       margin-right: 2rem;
+      height: 100%;
       box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
       border: none;
@@ -51,7 +52,16 @@
 
     .options {
       width: 17rem;
+      height: 100%;
       background: $white;
+      font-size: 1.4rem;
+      white-space: nowrap;
+
+      &__option--is-focused,
+      &__option--is-selected {
+        background: linear-gradient(90deg, #fde3e5, #fff4e1);
+        cursor: pointer;
+      }
 
       &__value-container {
         justify-content: center;
@@ -119,6 +129,7 @@
         display: flex;
         flex-direction: column;
         flex: 1;
+        white-space: nowrap;
       }
 
       &-conversion {
@@ -222,6 +233,52 @@
       .currency-content {
         &-conversion {
           display: none;
+        }
+      }
+    }
+  }
+}
+
+@include mobileView() {
+  .currencies {
+    .currency {
+      width: 100%;
+
+      &-content {
+        margin-left: 0;
+
+        &-conversion {
+          white-space: nowrap;
+          margin-right: 1.5rem;
+        }
+
+        .flag {
+          width: 4rem;
+          height: 4rem;
+          margin-left: 1.5rem;
+          margin-right: 1.5rem;
+        }
+
+        .draggable-handle {
+          &-icon {
+            width: 2.3rem;
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+          }
+
+          .delete {
+            width: 2.3rem;
+            margin-left: 1.4rem;
+            margin-right: 1.4rem;
+          }
+        }
+      }
+
+      &.mod-selected {
+        input {
+          margin-right: 1.5rem;
+          margin-left: 1.5rem;
+          width: 100%;
         }
       }
     }
