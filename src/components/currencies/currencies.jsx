@@ -119,10 +119,6 @@ const Currencies = () => {
   const addCurrency = currency => {
     const currencyToAdd = currency.id;
 
-    console.log(currencyToAdd);
-
-    console.log(currencies);
-
     for (var i in options) {
       if (currencyToAdd === options[i].id) {
         options.splice(i, 1);
@@ -180,6 +176,7 @@ const Currencies = () => {
                 code: `${currencyData[i].code}`,
                 name: `${currencyData[i].name}`,
                 flag: `${currencyData[i].flag}`,
+                symbol: `${currencyData[i].symbol}`,
                 modClass: ``
               };
               list.push(currency);
@@ -219,7 +216,6 @@ const Currencies = () => {
         }
         if (!match) {
           list.unshift(userCurrency);
-          console.log(list);
         }
 
         return list;
@@ -330,6 +326,7 @@ const Currencies = () => {
                           code={item.code}
                           name={item.name}
                           flag={item.flag}
+                          symbol={item.symbol}
                           base={items[0].code}
                         />
                       </div>

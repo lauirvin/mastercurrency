@@ -51,7 +51,7 @@ const Currency = props => {
         onBlur={handleInputChange}
       />
       <div className="currency-content-conversion">
-        <h3>{conversion}</h3>
+        <h3>{props.symbol + " " + conversion}</h3>
         <p>
           1 {props.code} = {currencyRate} {props.base}
         </p>
