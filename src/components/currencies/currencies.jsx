@@ -152,7 +152,7 @@ const Currencies = () => {
       result.destination.index
     );
 
-    updateCurrentInput(1)
+    updateInputChange(1);
     updateItems(newOrder);
     mainCurrency(newOrder);
   };
@@ -223,7 +223,7 @@ const Currencies = () => {
   const [holdItems, updateHoldItems] = useState();
   const [items, updateItems] = useState();
   const [options, updateOptions] = useState();
-  const [input, updateCurrentInput] = useState(1);
+  const [currentInput, updateInputChange] = useState(1);
 
   useEffect(() => {
     fetchUserLocation(fetchCurrencies()).then(value => {
@@ -235,9 +235,9 @@ const Currencies = () => {
     });
   }, []);
 
-  const currentInput = value => {
-    console.log(value)
-    updateCurrentInput(value);
+  const handleInputChange = value => {
+    console.log(value);
+    updateInputChange(value);
   };
 
   return (
@@ -277,9 +277,9 @@ const Currencies = () => {
                       >
                         <Currency
                           selectedCode={removeCurrency}
-                          enteredInput={currentInput}
+                          enteredInput={handleInputChange}
                           dragHandle={provided.dragHandleProps}
-                          input={input}
+                          input={currentInput}
                           code={item.code}
                           name={item.name}
                           flag={item.flag}

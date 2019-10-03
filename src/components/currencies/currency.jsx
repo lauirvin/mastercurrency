@@ -13,14 +13,6 @@ const Currency = props => {
   };
 
   const handleInputChange = e => {
-    setValue(e.target.value);
-  };
-
-  const currentInputOnLoad = () => {
-    props.enteredInput(value);
-  };
-
-  const currentInput = e => {
     props.enteredInput(e.target.value);
   };
 
@@ -35,8 +27,7 @@ const Currency = props => {
       });
   };
 
-  useEffect(() => {
-  }, [currencyConversion()]);
+  useEffect(() => {}, [currencyConversion()]);
 
   return (
     <div className="currency-content">
@@ -50,8 +41,8 @@ const Currency = props => {
         step="0.01"
         defaultValue="1.0000"
         placeholder="0"
-        onChange={currentInput}
-        onBlur={currentInput}
+        onChange={handleInputChange}
+        onBlur={handleInputChange}
       />
       <div className="currency-content-conversion">
         <h3>{(props.input * currencyRate).toString()}</h3>
