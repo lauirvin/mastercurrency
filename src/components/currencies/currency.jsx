@@ -36,9 +36,7 @@ const Currency = props => {
   };
 
   useEffect(() => {
-    currentInputOnLoad();
-    currencyConversion();
-  }, []);
+  }, [currencyConversion()]);
 
   return (
     <div className="currency-content">

@@ -152,6 +152,7 @@ const Currencies = () => {
       result.destination.index
     );
 
+    updateCurrentInput(1)
     updateItems(newOrder);
     mainCurrency(newOrder);
   };
@@ -222,7 +223,7 @@ const Currencies = () => {
   const [holdItems, updateHoldItems] = useState();
   const [items, updateItems] = useState();
   const [options, updateOptions] = useState();
-  const [input, updateCurrentInput] = useState();
+  const [input, updateCurrentInput] = useState(1);
 
   useEffect(() => {
     fetchUserLocation(fetchCurrencies()).then(value => {
