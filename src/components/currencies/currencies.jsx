@@ -119,6 +119,10 @@ const Currencies = () => {
   const addCurrency = currency => {
     const currencyToAdd = currency.id;
 
+    console.log(currencyToAdd);
+
+    console.log(currencies);
+
     for (var i in options) {
       if (currencyToAdd === options[i].id) {
         options.splice(i, 1);
@@ -236,7 +240,7 @@ const Currencies = () => {
     for (var id in currencyList) {
       const country = currencyList[id];
       const options = {
-        id: `${id}`,
+        id: `${country.id}`,
         value: `${country.code}`,
         label: `${country.code} - ${country.name}`
       };
@@ -267,6 +271,8 @@ const Currencies = () => {
   const handleInputChange = value => {
     updateInputChange(value);
   };
+
+  console.log(options);
 
   return (
     <div className="currencies">
