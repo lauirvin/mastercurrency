@@ -232,22 +232,10 @@ const Currencies = () => {
     let currencyList = [...currencies];
 
     let list = [];
+    let subtract = currencyList.filter(a => !items.some(b => a === b));
 
-    for (var i in currencyList) {
-      var match = false;
-      for (var j in items) {
-        if (currencyList[i].code === items[j].code) {
-          match = true;
-          break;
-        }
-      }
-      if (match) {
-        currencyList.splice(i, 1);
-      }
-    }
-
-    for (var id in currencyList) {
-      const country = currencyList[id];
+    for (var id in subtract) {
+      const country = subtract[id];
       const options = {
         id: `${country.id}`,
         value: `${country.code}`,
