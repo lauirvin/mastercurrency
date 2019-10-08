@@ -55,10 +55,11 @@ h2 {
 }
 
 h3,
+.highcharts-title,
 input {
   font-family: $primary-medium;
   font-weight: 320;
-  font-size: 2.4rem;
+  font-size: 2.4rem !important;
 }
 
 a {

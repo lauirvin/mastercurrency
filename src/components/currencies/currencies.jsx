@@ -6,7 +6,7 @@ import Select from "react-select";
 import Currency from "./currency";
 import currencyData from "../../data/countries.json";
 
-const Currencies = () => {
+const Currencies = props => {
   const removeCurrency = code => {
     let list = [];
 
@@ -83,6 +83,10 @@ const Currencies = () => {
     updateItems(cancelItems);
   };
 
+  const passItems = items => {
+    props.passItems(items);
+  };
+
   const mainCurrency = items => {
     items[0].modClass = "mod-selected";
 
@@ -157,6 +161,7 @@ const Currencies = () => {
     updateInputChange(1);
     updateItems(newOrder);
     mainCurrency(newOrder);
+    passItems(newOrder);
   };
 
   const fetchCurrencies = async () => {
@@ -260,6 +265,7 @@ const Currencies = () => {
       fetchUserLocation(list).then(value => {
         updateItems(value);
         mainCurrency(value);
+        passItems(value);
         updateOptions(fetchOptions(list, value));
       });
     });

@@ -1,0 +1,31 @@
+.highcharts-credits {
+  display: none;
+}
+
+.highcharts-title,
+.highcharts-axis-title,
+.highcharts-legend,
+.highcharts-axis,
+.highcharts-yaxis,
+.highcharts-axis-labels,
+.highcharts-yaxis-labels,
+.highcharts-tooltip {
+  font-family: $primary-medium;
+  font-weight: 320;
+  color: $fontColor !important;
+  fill: $fontColor !important;
+}
+
+.highcharts-container {
+  border-radius: 10px;
+}
+
+.minichart {
+  padding-top: 2rem;
+  padding-right: 1rem;
+  display: flex;
+  height: 30rem;
+  width: 55rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+}
