@@ -29,10 +29,13 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+#outer-container {
+  overflow: hidden;
+}
+
 header {
-  height: 10vh;
+  height: 15vh;
   width: 100%;
-  padding-top: 2rem;
 
   .header-container {
     display: flex;
@@ -76,9 +79,12 @@ header {
 }
 
 main {
-  margin: 1% auto 3% auto;
-  padding: 0% 3% 0 3%;
+  height: 85vh;
+  margin: 0 auto 0 auto;
   max-width: 124rem;
+
+  display: flex;
+  flex-direction: column;
 
   .components-container {
     display: flex;

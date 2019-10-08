@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
@@ -72,7 +72,6 @@ const MiniChart = props => {
 
             data[j].unshift(timestamp);
           }
-          Highcharts.charts[0].reflow();
           options.series.push({ color: "#ffc35a", name: symbol, data: data });
           setChartUpdate(true);
         });

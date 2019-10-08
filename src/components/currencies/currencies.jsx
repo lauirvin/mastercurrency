@@ -299,39 +299,45 @@ const Currencies = props => {
         />
       </div>
 
-      <DragDropContext onDragEnd={onDragEnd}>
-        <Droppable droppableId="droppable">
-          {(provided, snapshot) => (
-            <div {...provided.droppableProps} ref={provided.innerRef}>
-              {items !== undefined &&
-                items.map((item, index) => (
-                  <Draggable key={item.id} draggableId={item.id} index={index}>
-                    {(provided, snapshot) => (
-                      <div
-                        className={`currency ${item.modClass}`}
-                        ref={provided.innerRef}
-                        {...provided.draggableProps}
-                      >
-                        <Currency
-                          selectedCode={removeCurrency}
-                          enteredInput={handleInputChange}
-                          dragHandle={provided.dragHandleProps}
-                          input={currentInput}
-                          code={item.code}
-                          name={item.name}
-                          flag={item.flag}
-                          symbol={item.symbol}
-                          base={items[0].code}
-                        />
-                      </div>
-                    )}
-                  </Draggable>
-                ))}
-              {provided.placeholder}
-            </div>
-          )}
-        </Droppable>
-      </DragDropContext>
+      <div className="dd-wrapper">
+        <DragDropContext onDragEnd={onDragEnd}>
+          <Droppable droppableId="droppable">
+            {(provided, snapshot) => (
+              <div {...provided.droppableProps} ref={provided.innerRef}>
+                {items !== undefined &&
+                  items.map((item, index) => (
+                    <Draggable
+                      key={item.id}
+                      draggableId={item.id}
+                      index={index}
+                    >
+                      {(provided, snapshot) => (
+                        <div
+                          className={`currency ${item.modClass}`}
+                          ref={provided.innerRef}
+                          {...provided.draggableProps}
+                        >
+                          <Currency
+                            selectedCode={removeCurrency}
+                            enteredInput={handleInputChange}
+                            dragHandle={provided.dragHandleProps}
+                            input={currentInput}
+                            code={item.code}
+                            name={item.name}
+                            flag={item.flag}
+                            symbol={item.symbol}
+                            base={items[0].code}
+                          />
+                        </div>
+                      )}
+                    </Draggable>
+                  ))}
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+        </DragDropContext>
+      </div>
     </div>
   );
 };
