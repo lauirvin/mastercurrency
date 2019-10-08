@@ -72,7 +72,7 @@ const MiniChart = props => {
 
             data[j].unshift(timestamp);
           }
-          options.series.push({ color: "#ffc35a", name: symbol, data: data });
+          options.series = [{ color: "#ffc35a", name: symbol, data: data }];
           setChartUpdate(true);
         });
     }
