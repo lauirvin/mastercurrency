@@ -23,6 +23,11 @@ const options = {
 const MiniChart = props => {
   const [updateChart, setChartUpdate] = useState(false);
 
+  useEffect(() => {
+    fetchCurrencies();
+    setChartUpdate(false);
+  }, [props]);
+
   const fetchCurrencies = () => {
     let data = [];
     if (props.items !== undefined) {
@@ -72,13 +77,13 @@ const MiniChart = props => {
 
             data[j].unshift(timestamp);
           }
+
           options.series = [{ color: "#ffc35a", name: symbol, data: data }];
+
           setChartUpdate(true);
         });
     }
   };
-
-  fetchCurrencies();
 
   return (
     <div className="minichart">
