@@ -25,19 +25,22 @@ const Currencies = props => {
     document.getElementById("done").style.display = "none";
     document.getElementById("cancel").style.display = "none";
     document.getElementsByClassName("options")[0].style.display = "block";
+    document.getElementsByClassName("draggable-handle")[1].style.visibility =
+      "visible";
     document.getElementsByClassName("draggable-handle")[0].style.visibility =
       "visible";
 
     const doneItems = [];
 
-    doneItems.unshift(items[0]);
-    const itemsToFinish = items.slice(1);
+    doneItems.unshift(items[0], items[1]);
+    const itemsToFinish = items.slice(2);
     for (var i in itemsToFinish) {
       itemsToFinish[i].modClass = "";
       doneItems.push(itemsToFinish[i]);
     }
 
     updateItems(doneItems);
+    passItems(doneItems);
 
     for (var j in holdItems) {
       // Find out which item have been deleted
@@ -68,13 +71,15 @@ const Currencies = props => {
     document.getElementById("done").style.display = "none";
     document.getElementById("cancel").style.display = "none";
     document.getElementsByClassName("options")[0].style.display = "block";
+    document.getElementsByClassName("draggable-handle")[1].style.visibility =
+      "visible";
     document.getElementsByClassName("draggable-handle")[0].style.visibility =
       "visible";
 
     const cancelItems = [];
 
-    cancelItems.unshift(holdItems[0]);
-    const itemsToCancel = holdItems.slice(1);
+    cancelItems.unshift(holdItems[0], holdItems[1]);
+    const itemsToCancel = holdItems.slice(2);
     for (var i in itemsToCancel) {
       itemsToCancel[i].modClass = "";
       cancelItems.push(itemsToCancel[i]);
@@ -104,14 +109,16 @@ const Currencies = props => {
     document.getElementById("done").style.display = "block";
     document.getElementById("cancel").style.display = "block";
     document.getElementsByClassName("options")[0].style.display = "none";
+    document.getElementsByClassName("draggable-handle")[1].style.visibility =
+      "hidden";
     document.getElementsByClassName("draggable-handle")[0].style.visibility =
       "hidden";
 
     const editItems = [];
 
-    editItems.push(items[0]);
+    editItems.push(items[0], items[1]);
 
-    const itemsToEdit = items.slice(1);
+    const itemsToEdit = items.slice(2);
     for (var i in itemsToEdit) {
       itemsToEdit[i].modClass = "mod-edit";
       editItems.push(itemsToEdit[i]);
