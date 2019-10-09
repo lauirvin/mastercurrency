@@ -89,8 +89,9 @@ const Currencies = props => {
 
   const mainCurrency = items => {
     items[0].modClass = "mod-selected";
+    items[1].modClass = "mod-chart";
 
-    const unselectedItems = items.slice(1);
+    const unselectedItems = items.slice(2);
     for (var i in unselectedItems) {
       if (unselectedItems[i].modClass.length > 0) {
         unselectedItems[i].modClass = "";

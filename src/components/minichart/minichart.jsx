@@ -81,7 +81,6 @@ const MiniChart = props => {
           options.series = [{ color: "#ffc35a", name: symbol, data: data }];
 
           setChartUpdate(true);
-          // Highcharts.charts.forEach(chart => chart.reflow());
         });
     }
   };
