@@ -44,7 +44,6 @@ header {
     align-items: center;
     height: 100%;
     max-width: 124rem;
-    padding: 0% 3% 0 3%;
     margin: 0 auto;
 
     nav {
@@ -100,6 +99,13 @@ main {
       display: flex;
       flex-direction: column;
     }
+  }
+}
+
+@include largeScreen() {
+  .header-container,
+  main {
+    padding: 0% 3% 0 3%;
   }
 }
 

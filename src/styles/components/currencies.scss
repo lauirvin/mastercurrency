@@ -145,11 +145,13 @@
       &-title {
         display: flex;
         flex-direction: column;
-        flex: 1;
         white-space: nowrap;
       }
 
       &-conversion {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
         text-align: right;
         margin-right: 2rem;
       }
@@ -162,6 +164,7 @@
         text-align: right;
         border-bottom: 1px solid $fontColor;
         margin-right: 2rem;
+        // margin-left: 5rem;
       }
       hr {
         border: none;
@@ -255,6 +258,10 @@
       .currency-content {
         &-conversion {
           display: none;
+        }
+
+        &-title {
+          flex: 1;
         }
       }
     }
