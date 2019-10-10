@@ -141,6 +141,7 @@ const Currencies = props => {
 
             newItems.push(currencies[j]);
             updateItems(newItems);
+            passItems(newItems);
           }
         }
       }

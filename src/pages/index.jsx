@@ -5,6 +5,7 @@ import SEO from "../components/SEO";
 
 import Currencies from "../components/currencies/currencies";
 import MiniChart from "../components/minichart/minichart";
+import Compare from "../components/compare/compare";
 
 const Converter = () => {
   const [items, setItems] = useState();
@@ -18,7 +19,10 @@ const Converter = () => {
       <SEO title="Converter" />
       <h2>Converter</h2>
       <div className="components-container">
-        <MiniChart items={items} />
+        <div className="left">
+          <MiniChart items={items} />
+          <Compare items={items} />
+        </div>
         <Currencies passItems={passItems} />
       </div>
     </Layout>

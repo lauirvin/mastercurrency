@@ -4,6 +4,15 @@ import { Link } from "gatsby";
 import "../styles/styles.scss";
 
 const Layout = ({ children }) => {
+  useEffect(() => {
+    const tag = document.getElementsByTagName("a");
+    Array.from(tag).forEach((element, i) => {
+      if (element.innerHTML === children[0].props.title) {
+        tag[i].classList.add("selected");
+      }
+    });
+  });
+  
   return (
     <div id="outer-container">
       <header>

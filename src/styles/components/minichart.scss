@@ -12,8 +12,8 @@
 .highcharts-tooltip {
   font-family: $primary-medium;
   font-weight: 320;
-  color: $fontColor !important;
-  fill: $fontColor !important;
+  color: $lightFontColor !important;
+  fill: $lightFontColor !important;
 }
 
 .highcharts-container {
@@ -22,6 +22,8 @@
 
 .minichart {
   padding-top: 2rem;
+  margin-bottom: 1.5rem;
+
   padding-right: 1rem;
   display: table;
   border-radius: 10px;
