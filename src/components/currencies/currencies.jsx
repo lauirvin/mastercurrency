@@ -11,10 +11,6 @@ const Currencies = props => {
     props.passItems(items);
   };
 
-  const passOptions = options => {
-    props.passOptions(options);
-  };
-
   const passCurrencies = currencies => {
     props.passCurrencies(currencies);
   };
@@ -69,29 +65,8 @@ const Currencies = props => {
     passItems(newOrder);
   };
 
-  const fetchOptions = (currencies, items) => {
-    let currencyList = [...currencies];
-
-    let list = [];
-    let subtract = currencyList.filter(a => !items.some(b => a === b));
-
-    for (var id in subtract) {
-      const country = subtract[id];
-      const options = {
-        id: `${country.id}`,
-        value: `${country.code}`,
-        label: `${country.code} - ${country.name}`
-      };
-      list.push(options);
-    }
-
-    return list;
-  };
-
   const [currencies, updateCurrencyList] = useState();
-  const [holdItems, updateHoldItems] = useState();
   const [items, updateItems] = useState();
-  const [options, updateOptions] = useState();
   const [currentInput, updateInputChange] = useState(1);
 
   const fetchUserLocation = async currencies => {
@@ -130,7 +105,6 @@ const Currencies = props => {
     mainCurrency(currentLocation);
     updateItems(currentLocation);
     passItems(currentLocation);
-    passOptions(fetchOptions(currencies, currentLocation));
     passCurrencies(currencies);
   };
 
@@ -174,7 +148,7 @@ const Currencies = props => {
 
   useEffect(() => {
     updateItems(props.newItems);
-    passItems(props.newItems)
+    passItems(props.newItems);
   }, [props.newItems]);
 
   const handleInputChange = value => {

@@ -11,7 +11,6 @@ import Compare from "../components/compare/compare";
 const Converter = () => {
   const [currencies, setCurrencies] = useState();
   const [items, setItems] = useState();
-  const [options, setOptions] = useState();
   const [time, setTime] = useState("...");
 
   const [newItems, setNewItems] = useState();
@@ -22,10 +21,6 @@ const Converter = () => {
 
   const passItems = items => {
     setItems(items);
-  };
-
-  const passOptions = options => {
-    setOptions(options);
   };
 
   const passNewItems = newItems => {
@@ -62,7 +57,6 @@ const Converter = () => {
         <h4>Last updated: {time}</h4>
         <Controls
           items={items}
-          options={options}
           currencies={currencies}
           passNewItems={passNewItems}
         />
@@ -73,7 +67,6 @@ const Converter = () => {
           <Compare items={items} />
         </div>
         <Currencies
-          passOptions={passOptions}
           passItems={passItems}
           passCurrencies={passCurrencies}
           newItems={newItems}
