@@ -28,6 +28,7 @@ Currency conversion web application built with ReactJS, powered by GatsbyJS.
 - [React-Beautiful-DnD](https://react-beautiful-dnd.netlify.com) - Drag and drop library used
 - [Highcharts](https://www.highcharts.com/) - Interactive chart library used
 - [Axios](https://github.com/axios/axios) - HTTP client used
+- [Exchange rate](https://exchangeratesapi.io) - API used
 
 ## Designed With
 
