@@ -9,7 +9,7 @@ module.exports = {
       instagram: "irvin.dev",
       email: "lauirvin98@gmail.com",
     },
-    imageShare: "./src/media/avatar.png",
+    imageShare: "./src/media/mastercurrency.png",
   },
   plugins: [
     `gatsby-plugin-sass`,

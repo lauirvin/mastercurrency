@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { useStaticQuery, graphql } from "gatsby";
-import favicon from "../media/avatar.png";
+import favicon from "../media/mastercurrency.png";
 
 const SEO = ({ meta, lang, title }) => {
   const { site } = useStaticQuery(
