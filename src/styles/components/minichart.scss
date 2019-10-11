@@ -21,19 +21,23 @@
 }
 
 .minichart {
-  display: flex;
-  align-items: center;
-  height: 48.5%;
-  padding-right: 1rem;
   display: table;
   border-radius: 10px;
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
 
   > div {
-    display: table-cell;
-    position: relative;
-    top: 1.5rem;
-    bottom: 0;
-    vertical-align: middle;
+    padding-top: 1.5rem;
+  }
+}
+
+@include extraLargeScreen() {
+  .minichart {
+    height: 50%;
+    > div {
+      display: table-cell;
+      vertical-align: middle;
+      padding-top: 0;
+    }
   }
 }

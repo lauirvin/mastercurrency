@@ -11,7 +11,14 @@ html {
 
 body {
   width: 100%;
+  height: 100%;
   margin: 0 auto;
+}
+
+#___gatsby,
+#outer-container,
+div[role="group"][tabindex] {
+  height: 100%;
 }
 
 button {
@@ -105,10 +112,11 @@ main {
     height: 73vh;
 
     .left {
-      width: 45%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      margin-bottom: 3rem;
+      width: 45%;
     }
   }
 }
@@ -117,6 +125,16 @@ main {
   .header-container,
   main {
     padding: 0 3rem 0 3rem;
+  }
+}
+
+@include extraLargeScreen() {
+  main {
+    .components-container {
+      .left {
+        max-height: 800px;
+      }
+    }
   }
 }
 
