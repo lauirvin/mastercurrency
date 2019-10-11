@@ -29,20 +29,22 @@ const Converter = () => {
 
   const fetchTime = () => {
     const date = new Date();
-    const hour = date.getHours();
-    const minute = date.getMinutes();
-
+    let hour = date.getHours();
+    let minute = date.getMinutes();
     let clock;
-    let newHour;
+
+    if (minute < 10) {
+      minute = "0" + minute.toString();
+    }
 
     if (hour > 12) {
-      newHour = hour - 12;
+      hour = hour - 12;
       clock = "PM";
     } else {
       clock = "AM";
     }
 
-    setTime(newHour + ":" + minute + clock);
+    setTime(hour + ":" + minute + clock);
   };
 
   useEffect(() => {
