@@ -6,7 +6,7 @@ import SEO from "../components/SEO";
 const Help = () => (
   <Layout>
     <SEO title="Help" />
-    <h2>Help</h2>
+    <h2>Coming Soon...</h2>
   </Layout>
 );
 

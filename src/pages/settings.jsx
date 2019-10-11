@@ -6,7 +6,7 @@ import SEO from "../components/SEO";
 const Settings = () => (
   <Layout>
     <SEO title="Settings" />
-    <h2>Settings</h2>
+    <h2>Coming Soon...</h2>
   </Layout>
 );
 
