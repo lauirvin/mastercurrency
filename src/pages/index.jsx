@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import Layout from "../components/layout";
-import SEO from "../components/SEO";
+import SEO from "../components/seo";
 
 import Currencies from "../components/currencies/currencies";
 import Controls from "../components/currencies/controls";
