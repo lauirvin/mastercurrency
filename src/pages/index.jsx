@@ -54,7 +54,7 @@ const Converter = () => {
   return (
     <Layout>
       <SEO title="Converter" />
-      <h2>Converter</h2>
+      <h2 className="title">Converter</h2>
       <div className="subtitle-row">
         <h4>Last updated: {time}</h4>
         <Controls

@@ -265,8 +265,57 @@
 
 @include mobileView() {
   .currencies {
+    left: unset;
+
+    .dd-wrapper {
+      overflow-y: visible;
+    }
+
+    &-controls {
+      position: relative;
+      bottom: 1rem;
+      margin: 0;
+
+      #edit,
+      #done {
+        background-position: 1.2rem !important;
+        background-size: 1.8rem !important;
+      }
+
+      #cancel {
+        background-position: 1.25rem !important;
+        background-size: 1.4rem !important;
+      }
+
+      button {
+        width: 4rem !important;
+
+        span {
+          display: none;
+        }
+      }
+
+      .options {
+        width: 4rem;
+
+        &__menu {
+          width: 20rem !important;
+          right: 0;
+        }
+        &__value-container {
+          background-position: 1.1rem !important;
+          background-size: 1.9rem !important;
+        }
+
+        &__placeholder {
+          display: none;
+        }
+      }
+    }
+
     .currency {
       width: 100%;
+      left: unset;
 
       &-content {
         margin-left: 0;
