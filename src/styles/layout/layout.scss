@@ -113,13 +113,17 @@ main {
   .components-container {
     display: flex;
     justify-content: space-between;
-    height: 73vh;
+    overflow: hidden;
+    flex: 1;
+    padding: 30px;
+    margin: -30px;
 
     .left {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       margin-bottom: 3rem;
+      margin-right: 1.5rem;
       width: 45%;
     }
   }
