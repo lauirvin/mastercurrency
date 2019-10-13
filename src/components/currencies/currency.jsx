@@ -4,8 +4,8 @@ import axios from "axios";
 import draggable from "../../media/icons/list.svg";
 
 const Currency = props => {
-  const [currencyRate, setRate] = useState();
-  const [conversion, setConversion] = useState();
+  const [currencyRate, setRate] = useState("...");
+  const [conversion, setConversion] = useState("...");
 
   const removeCurrency = () => {
     props.selectedCode(props.code);

@@ -274,8 +274,9 @@
       margin: unset;
       padding: unset;
 
-      .currency {
+      > div {
         width: 95%;
+        margin: auto;
       }
     }
 
@@ -334,6 +335,8 @@
         }
 
         .flag {
+          min-width: 4rem;
+          min-height: 4rem;
           width: 4rem;
           height: 4rem;
           margin-left: 1.5rem;
@@ -345,11 +348,13 @@
             width: 2.3rem;
             margin-left: 1.5rem;
             margin-right: 1.5rem;
+            background-color: initial;
           }
 
           .delete {
             width: 2.3rem;
-            background-size: 2.2rem;
+            background-color: initial;
+            background-size: 2.1rem;
             margin-left: 1.5rem;
             margin-right: 1.5rem;
           }

@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import axios from "axios";
-import Select from "react-select";
 
 import Currency from "./currency";
 import currencyData from "../../data/countries.json";
 
 const Currencies = props => {
+  const [items, updateItems] = useState();
+  const [currentInput, updateInputChange] = useState(1);
+  
   const passItems = items => {
     props.passItems(items);
   };
@@ -24,8 +26,7 @@ const Currencies = props => {
       }
     }
 
-    updateItems(list.concat(items));
-    return list.concat(items);
+    passItems(list.concat(items));
   };
 
   const mainCurrency = items => {
@@ -64,10 +65,6 @@ const Currencies = props => {
     mainCurrency(newOrder);
     passItems(newOrder);
   };
-
-  const [currencies, updateCurrencyList] = useState();
-  const [items, updateItems] = useState();
-  const [currentInput, updateInputChange] = useState(1);
 
   const fetchUserLocation = async currencies => {
     let list = [currencies[31], currencies[9], currencies[8]]; // Default list of items
@@ -139,7 +136,6 @@ const Currencies = props => {
     });
 
     fetchUserLocation(sortedList);
-    updateCurrencyList(sortedList);
   };
 
   useEffect(() => {
