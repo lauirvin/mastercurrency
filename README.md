@@ -9,7 +9,7 @@
 
 Currency conversion web application built with ReactJS, powered by GatsbyJS.
 
-[Click here to launch **MasterCurrency**](https://www.mastercurrency.irviniveslau.com)
+[Click here to launch **MasterCurrency**](https://mastercurrency.irviniveslau.com/)
 
 ## 🧰 Prerequisites
 
